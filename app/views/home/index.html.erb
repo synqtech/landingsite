@@ -17,47 +17,81 @@
 		</div>
 	</div>
 </section>
-<section class="feature overview">
+
+<section id="acumen" class="feature" style="background-image: url(<%= image_url 'ai/4kbahrain.jpg'%>)">
+	<div class="overlay">ads</div>
+</section>
+
+<section id="apps" class="apps">
 	<div class="container">
+		<h2 class="center">Upcoming Apps</h2>
 		<div class="row">
-			<div class="col-sm-7">
-				<h1>COLUMN</h1>
-				<p class="lead">We offer a cost-effective solution for storing CCTV footage for up to one year, without compromising on video quality, or using secondary streams.</p>
+			
+			<div class="col-sm-4">
+				<div class="panel panel-thumb">
+					<%= image_tag "qdrive.png", :class=>"responsive" %>
+					<hr>
+					<h3 class="center">QDrive</h3>
+					<p class="lead center">A replacement for your keys; a revolution in road safety.</p>
+					<a data-toggle="modal" data-target="#AppModalQDrive" class="btn btn-lg btn-block btn-default">Learn More » </a>
+				</div>
 			</div>
-			<div class="col-sm-5">
-				<%= image_tag "qdrive.png", :class=>"responsive" %>
+			<div class="col-sm-4">
+				<div class="panel panel-thumb">
+					<%= image_tag "construction.png", :class=>"responsive" %>
+					<hr>
+					<h3 class="center">QWatch</h3>
+					<p class="lead center">Site monitoring from the comfort of anywhere.</p>
+					<a data-toggle="modal" data-target="#AppModalQWatch" class="btn btn-lg btn-block btn-default">Learn More » </a>
+				</div>
 			</div>
+			<div class="col-sm-4">
+				<div class="panel panel-thumb">
+					<%= image_tag "qgarage.png", :class=>"responsive" %>
+					<hr>
+					<h3 class="center">QGarage</h3>
+					<p class="lead center">Monitor your ride from anywhere in the world.</p>
+					<a data-toggle="modal" data-target="#AppModalQGarage" class="btn btn-lg btn-block btn-default">Learn More » </a>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </section>
-<section class="feature overview">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-5">
-				<%= image_tag "construction.png", :class=>"responsive" %>
-			</div>
-			<div class="col-sm-7">
-				<h1>COLUMN</h1>
-				<p class="lead">We offer a cost-effective solution for storing CCTV footage for up to one year, without compromising on video quality, or using secondary streams.</p>
-				
-			</div>
-		</div>
-	</div>
-</section>
+
 <section class="feature dark brands">
 	<div class="container">
+		<h2 class="center">Top Clients</h2>
 		<div class="row">
-			<div class="col-xs-6 col-sm-3"><div class="brand-panel">Safeway</div></div>
-			<div class="col-xs-6 col-sm-3"><div class="brand-panel"></div></div>
-			<div class="col-xs-6 col-sm-3"><div class="brand-panel"></div></div>
-			<div class="col-xs-6 col-sm-3"><div class="brand-panel"></div></div>
+			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/cantire.jpg' %></div></div>
+			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/choices.jpg' %></div></div>
+			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/fairway.jpg' %></div></div>
+			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/iga.jpg' %></div></div>
 		</div>
 		<div class="row">
-			<div class="col-xs-6 col-sm-3"><div class="brand-panel"></div></div>
-			<div class="col-xs-6 col-sm-3"><div class="brand-panel"></div></div>
-			<div class="col-xs-6 col-sm-3"><div class="brand-panel"></div></div>
-			<div class="col-xs-6 col-sm-3"><div class="brand-panel"></div></div>
+			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/lordco.jpg' %></div></div>
+			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/metro.jpg' %></div></div>
+			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/rexall.jpg' %></div></div>
+			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/sobeys.jpg' %></div></div>
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </section>
+<div class="footer">
+
+
+	<div class="fh-contact">
+			
+			<div class="container-half-l">asads</div>
+
+
+	</div>
+	<div class="fh-location">
+		<div class="container-half-r">asads</div>
+	</div>
+
+</div>
+
+<%= render :partial => 'app/qwatch' %>
+<%= render :partial => 'app/qdrive' %>
+<%= render :partial => 'app/qgarage' %>

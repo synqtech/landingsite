@@ -89,6 +89,7 @@ nav {
 	height: 400px;
 }
 .feature {
+
 	&:nth-child(odd) {
 		background: #f4f4f4;
 	}
@@ -100,13 +101,15 @@ nav {
 
 		&.brands .brand-panel {
 			text-align: center;
-			padding: 30px;
-			font-size: 18px;
 			border: 1px solid #d8d8d8;
 			background: #fff;
-			height: 100px;
+			padding: 25px;
 			margin-bottom: 20px;
 			border-radius: 3px;
+			img {
+				height: 75px;
+				width: 100px;
+			}
 		}
 	}
 
@@ -120,18 +123,103 @@ nav {
 	}
 }
 
-.fh {
-	height: 300px;
+.panel {
 
-	&:first-child {
-		background: #468fff;
+	&.panel-thumb {
+		border-radius: 5px;
+		img {
+			max-width: 180px;
+			width: 100%;
+			display:block;
+			margin: 20px auto;
+
+			/* TRANSITION ITEMS */
+			-webkit-filter: saturate(0);
+			-moz-filter: saturate(0);
+			-ms-filter: saturate(0);
+			filter: saturate(0%);
+			opacity: 0.5;
+
+			-webkit-transition: 200ms;
+			-moz-transition: 200ms;
+			-ms-transition: 200ms;
+
+		}
+
+		&:hover {
+			img {
+			-webkit-filter: saturate(1);
+			-moz-filter: saturate(1);
+			-ms-filter: saturate(1);
+			filter: saturate(1);
+			opacity: 1;
+			}
+		}
+
+		.btn {
+			@extend .btn-default;
+  			background-color: #a4a4a4;
+  			color: #fff;
+  			border: 5px solid #fff !important;
+  			
+  			&:hover {	
+  				background-color: #aeaeae;
+  				color: #fff;
+  			}
+		}
+		border: 1px solid #d8d8d8 !important;
 	}
-	&:last-child {
+}
+
+.fh-contact {
+	height: 300px;
+	min-width: 320px;
+	background: #468fff;
+	width: 50%;
+	float: left;
+}
+.fh-location {
 		background: #2061cf;
-	}
+		height: 300px;
+		width: 50%;
+		min-width: 320px;
+		float: left;
 }
 
 .responsive {
 	width: 100%;
 	height: auto;
+}
+.center {
+	text-align:center;
+}
+.container-half-l {
+	width: 100%;
+	float:right;
+	padding: 20px;
+	max-width: 571px;
+	
+}
+.container-half-r {
+	width: 100%;
+	float:left;
+	padding: 20px;
+	max-width: 571px;
+	
+}
+.footer {
+	max-width: 100%;
+}
+#acumen {
+	background-attachment: fixed;
+	position: relative;
+	min-height: 800px;
+	background-size: auto;
+	.overlay {
+		background: rgba(255,0,0,0.5);
+		top: 0; left: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
 }
