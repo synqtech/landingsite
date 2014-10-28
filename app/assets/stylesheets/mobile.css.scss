@@ -1,0 +1,125 @@
+body {
+	margin: 0;
+}
+html * {
+	box-size: border-box;
+}
+.mobile-nav {
+	font-family:sans-serif;
+	position: fixed;
+	z-index: 10000000;
+	height: 50px;
+	width: 100%;
+}
+.mobile-nav .logo > img {
+	display: block;
+	margin: 0px auto;
+	float: none;
+}
+.nav-contents-wrap {
+	height: 0px;
+	overflow:hidden;
+}
+.mobile-nav.open {
+	.nav-contents-wrap {
+		height: 50px;
+		display: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.action-left:after {
+		background: white;
+		bottom: 23px;
+		-webkit-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	.action-left:before {
+		background: white;
+		top: 23px;
+		-webkit-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+}
+.action-left:before, .action-left:after {
+	background: white;
+	width: 30px;
+	height: 3px;
+	border-radius: 2px;
+	position: absolute;
+	display: block;
+	content: '';
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-ms-transition: 200ms;
+	-o-transition: 200ms;
+
+}
+.action-left:after {
+	bottom: 15px;
+	left: 10px;
+	-webkit-transition-delay: 200ms;
+}
+
+.action-left:before {
+	top: 15px;
+	right: 10px;
+	-webkit-transition-delay: 200ms;
+}
+.action-left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-ms-transition: 200ms;
+	-o-transition: 200ms;
+
+}
+
+
+
+.nav-contents {
+	background: rgba(0,0,0,0.25);
+	height: 50px;
+	margin-top: 0px;
+	width: 100%;
+	overflow-y: hidden;
+
+
+}
+.nav-contents li {
+	float: left;
+	margin-left: 20px;
+	height: 50px;
+
+}
+.nav-contents li a:hover {background: #1a1a1a;}
+.nav-contents li a {
+	color: #fff;
+	display: block;
+	height: 50px;
+	padding-top: 12px;
+	font-size: 18px;
+	overflow: hidden;
+
+	
+}
+.nav-contents-wrap {
+	width: 100%;
+	overflow-x: scroll;
+
+}
+.nav-contents-wrap::-webkit-scrollbar { 
+	    display: none; 
+	}

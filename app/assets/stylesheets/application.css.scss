@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+
+ */
+
+ @import 'bootstrap';
+
+nav {
+
+}
+.sm-menu {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+
+	li {
+		
+		display: inline-block;
+		list-style: none;
+		margin-top: 5px;
+		
+		a {
+			padding: 0px 10px;
+			font-size: 16px;
+			color: #fff;
+			border: 1px solid rgba(0,0,0,0);
+			border-radius: 20px;
+			display: block;
+			text-decoration: none;
+			line-height: 37px;
+			-webkit-transition: 200ms;
+			-moz-transition: 200ms;
+			-ms-transition: 200ms;
+			-o-transition: 200ms;
+			transition: 200ms;
+
+			&:hover {
+				border: 1px solid #fff;
+			}
+			&.special {
+				background: #fff;
+				color: #53C2FD;
+			}
+		}
+	}
+
+}
+.header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 50px;
+	height: 50px;
+
+	.brand {
+		float: left;
+	}
+}
+.header-fade {
+	/* Rectangle 6: */
+	background-image: -o-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -moz-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -ms-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: linear-gradient(-180.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+}
+.header-fade-dark {
+	/* Rectangle 6: */
+	background-image: -o-linear-gradient(-91.5deg, rgba(5,5,5,0.15) 83%, rgba(0,0,0,0.25) 100%);
+	background-image: -moz-linear-gradient(-91.5deg, rgba(5,5,5,0.15) 83%, rgba(0,0,0,0.25) 100%);
+	background-image: -ms-linear-gradient(-91.5deg, rgba(5,5,5,0.15) 83%, rgba(0,0,0,0.25) 100%);
+	background-image: linear-gradient(-180.5deg, rgba(5,5,5,0.15) 83%, rgba(0,0,0,0.25) 100%);
+}
+.hero {
+	background-image: -o-linear-gradient(-89deg, #53C2FD 0%, #284CAE 100%);
+	background-image: -moz-linear-gradient(-89deg, #53C2FD 0%, #284CAE 100%);
+	background-image: -ms-linear-gradient(-89deg, #53C2FD 0%, #284CAE 100%);
+	background-image: linear-gradient(-179deg, #53C2FD 0%, #284CAE 100%);
+	height: 400px;
+}
+.feature {
+	&:nth-child(odd) {
+		background: #f4f4f4;
+	}
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&.dark {
+		background: #f4f4f4;
+
+		&.brands .brand-panel {
+			text-align: center;
+			padding: 30px;
+			font-size: 18px;
+			border: 1px solid #d8d8d8;
+			background: #fff;
+			height: 100px;
+			margin-bottom: 20px;
+			border-radius: 3px;
+		}
+	}
+
+
+	img {
+		max-width: 256px;
+		height: auto;
+		horizontal-align: center;
+		display: block;
+		margin: 0px auto;
+	}
+}
+
+.fh {
+	height: 300px;
+
+	&:first-child {
+		background: #468fff;
+	}
+	&:last-child {
+		background: #2061cf;
+	}
+}
+
+.responsive {
+	width: 100%;
+	height: auto;
+}
