@@ -46,7 +46,7 @@ html * {
 	}
 	.action-left:before {
 		background: white;
-		top: 23px;
+		top: 24px;
 		-webkit-transform: rotate(-45deg);
 		-o-transform: rotate(-45deg);
 		-moz-transform: rotate(-45deg);
@@ -72,13 +72,13 @@ html * {
 .action-left:after {
 	bottom: 15px;
 	left: 10px;
-	-webkit-transition-delay: 200ms;
+	// -webkit-transition-delay: 200ms;
 }
 
 .action-left:before {
 	top: 15px;
 	right: 10px;
-	-webkit-transition-delay: 200ms;
+	// -webkit-transition-delay: 200ms;
 }
 .action-left {
 	position: absolute;
