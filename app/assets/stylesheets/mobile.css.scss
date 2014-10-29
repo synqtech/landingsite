@@ -15,17 +15,25 @@ html * {
 	display: block;
 	margin: 0px auto;
 	float: none;
+	height: 50px !important;
+	width: 150px !important;
 }
 .nav-contents-wrap {
 	height: 0px;
 	overflow:hidden;
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-ms-transition: 200ms;
+	transition: 200ms;
 }
 .mobile-nav.open {
+
 	.nav-contents-wrap {
 		height: 50px;
 		display: absolute;
 		top: 0px;
 		left: 0px;
+
 	}
 	.action-left:after {
 		background: white;
@@ -91,12 +99,11 @@ html * {
 
 .nav-contents {
 	background: rgba(0,0,0,0.25);
-	height: 50px;
+	height: 53px;
 	margin-top: 0px;
 	width: 100%;
 	overflow-y: hidden;
-
-
+	padding: 3px;
 }
 .nav-contents li {
 	float: left;
@@ -104,12 +111,17 @@ html * {
 	height: 50px;
 
 }
-.nav-contents li a:hover {background: #1a1a1a;}
+.nav-contents li a:hover {}
 .nav-contents li a {
+	text-decoration: none;
+	margin-bottom: 3px;
+	border-radius: 5px;
+	padding: 4px 20px;
 	color: #fff;
 	display: block;
-	height: 50px;
-	padding-top: 12px;
+	line-height: 44px;
+
+	
 	font-size: 18px;
 	overflow: hidden;
 

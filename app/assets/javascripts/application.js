@@ -17,6 +17,14 @@
 //= require_tree .
 
 $(document).ready(function() {
+	$(".action-left").click(function() {
+		$(".mobile-nav").toggleClass('open');
+	});
 
+});
+
+$(window).resize(function() {
+	$("iframe.video").each(function() {
+		$(this).css('height', $(this).width*9/16+'px');
+	});
 })
-
