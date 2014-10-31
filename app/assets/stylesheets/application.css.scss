@@ -103,6 +103,15 @@ nav {
 	background-image: -ms-linear-gradient(-89deg, #53C2FD 0%, #284CAE 100%);
 	background-image: linear-gradient(-179deg, #53C2FD 0%, #284CAE 100%);
 	height: 400px;
+
+	.phone-number {
+		h1 {
+			color: #fff;
+			font-size: 60px;
+			font-weight: 100;
+		}
+	}
+
 }
 .feature {
 
@@ -140,16 +149,37 @@ nav {
 }
 .modal {
 	z-index: 10000000000000000;
-	.modal-header {
-		img {
-			display: block;
-			width:75%;
-			max-width: 128px;
-			height: auto;
-			margin: 0px auto;
+	.modal-content {
+
+		.modal-body {
+			.sub-feature {
+				&:nth-child(odd) {
+					// background: #fafaff;
+					
+				}
+				img.small-responsive {
+					margin-top: 40px !important;
+					width: 90%;
+					height: auto;
+					display:block;
+					margin: 0px auto;
+				}
+			}	
 
 		}
-	}	
+
+		
+		.modal-header {
+			img {
+				display: block;
+				width:75%;
+				max-width: 128px;
+				height: auto;
+				margin: 0px auto;
+
+			}
+		}	
+	}
 }
 
 .panel {
@@ -255,6 +285,10 @@ nav {
 }
 .center {
 	text-align:center;
+}
+.center-img {
+	display: block;
+	margin: 0px auto;
 }
 .container-half-l {
 	width: 100%;

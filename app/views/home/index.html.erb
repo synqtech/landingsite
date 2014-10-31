@@ -1,7 +1,18 @@
 <%= render :partial => 'layouts/navs' %>
-
+<section id="logo-name">
+	<%= image_tag 'logo-large.svg', :class=>"center-img" %>
+</section>
 <div class="hero">
-	
+	<div class="phone-number">
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<h1 class="center">(778) 440-2005</h1>
+				<hr>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+	</div>
 </div>
 <section class="feature overview">
 	<div class="container">
@@ -92,12 +103,18 @@
 	
 </section>
 
-<section id="apps" class="apps">
+<section id="apps" class="apps feature">
 	<div class="container">
-		<h2 class="center">Upcoming Apps</h2>
 		<div class="row">
+
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<h2 class="">Upcoming Products</h2>
+				<p class="lead">SYNQ has several projects on the go to bring convenience, tech, safety, and security to your home or workplace.</p>
+			</div>
 			
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="panel panel-thumb">
 					<%= image_tag "qdrive.png", :class=>"responsive" %>
 					<hr>
@@ -106,7 +123,7 @@
 					<a data-toggle="modal" data-target="#AppModalQDrive" class="btn btn-lg btn-block btn-default">Learn More » </a>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="panel panel-thumb">
 					<%= image_tag "construction.png", :class=>"responsive" %>
 					<hr>
@@ -115,7 +132,7 @@
 					<a data-toggle="modal" data-target="#AppModalQWatch" class="btn btn-lg btn-block btn-default">Learn More » </a>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<div class="panel panel-thumb">
 					<%= image_tag "qgarage.png", :class=>"responsive" %>
 					<hr>
@@ -131,7 +148,16 @@
 
 <section class="feature dark brands">
 	<div class="container">
-		<h2 class="center">Top Clients</h2>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h2 class="center">Top Clients</h2>
+				<p class="lead">We offer our services to several high-profile businesses within British Columbia.</p>
+				<hr>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		
 		<div class="row">
 			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/cantire.jpg' %></div></div>
 			<div class="col-xs-6 col-sm-3"><div class="brand-panel"><%= image_tag 'clients/choices.jpg' %></div></div>
