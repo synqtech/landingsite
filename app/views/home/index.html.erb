@@ -1,39 +1,45 @@
 <%= render :partial => 'layouts/navs' %>
 <section id="logo-name">
 	<%= image_tag 'logo-large.svg', :class=>"center-img" %>
-</section>
-<div class="hero">
-	<div class="phone-number">
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
-				<h1 class="center">(778) 440-2005</h1>
-				<hr>
-			</div>
-			<div class="col-sm-3"></div>
-		</div>
+	<div class="desc-imgs">
+		<%= image_tag 'lead/security.png' %>
+		<%= image_tag 'lead/cctv.png' %>
+		<%= image_tag 'lead/service.png' %>
+		<%= image_tag 'lead/barcode.png' %>
 	</div>
-</div>
-<section class="feature overview">
+</section>
+<section id="phone">
+	<div class="phone-number">
+	asd
+	</div>
+</section>
+
+<section id="products" class="title" style="background-image: url(<%= image_url 'large/acumen.jpg'%>)">
+	<h1>Products &amp; Services</h1>
+</section>
+
+<section class="feature">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-5">
-				<%= image_tag "cctv.png", :class=>"responsive" %>
-				
-			</div>
-			<div class="col-sm-7">
+			<div class="col-sm-4">
 				<h1>Long Term CCTV Recording</h1>
 				<p class="lead">We offer a cost-effective solution for storing CCTV footage for up to one year, without compromising video quality, or using secondary streams.</p>
-
-				<%= image_tag 'svr/wide.jpg', :style=>"width: 100% !important; max-width: 960px;" %>
-
-
+				<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Specifications »</a>
+				<%= image_tag 'cctv.png', :class=>"responsive" %>
+			</div>
+			<div class="col-sm-8">
+				<%= image_tag 'svr/synq-box.jpg', :style=>"width: 100% !important; max-width: 960px;" %>
+				<p>A CCTV monitoring system can provide a number of benefits to your business. However, we have learned that in this industry, one of the most significant issues our clients face with their monitoring systems is data retention that is cost effecitve.</p>
+				<p>Today, most CCTV Monitoring sytems hold data for a maximum of 2-3 months, and this presents several liability issues ranging from slips, trips and falls in the workplace, to assault and false arrest accusations toward loss prevention officers.</p>
+				<p>Synq Access and Security Technology has recognized this as a major issue in our field, and we now have the ability to offer you a solution for the data retention you need, without compromising on video quality or using secondary streams.</p>
+				<p>We do this by directly working with manufacturers to bring you a cost effective platform, customized for the CCTV and Security industry. As one of the only companies in Canada able to offer this solution, Synq Access and Security Technology stands out as a unique company that is committed to meeting your company's security needs</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="acumen" class="feature" style="background-image: url(<%= image_url 'ai/4kbahrain.jpg'%>)">
+
+<section id="acumen" class="" style="background-image: url(<%= image_url 'ai/4kbahrain.jpg'%>)">
 	<div class="container">
 		<div class="overlay"></div>
 		<!-- Camera Models -->
@@ -175,15 +181,8 @@
 </section>
 <div class="footer">
 
-
-	<div class="fh-contact">
-			
-			<div class="container-half-l">asads</div>
-
-
-	</div>
-	<div class="fh-location">
-		<div class="container-half-r">asads</div>
+	<div class="content">
+		<
 	</div>
 
 </div>
@@ -191,3 +190,4 @@
 <%= render :partial => 'app/qwatch' %>
 <%= render :partial => 'app/qdrive' %>
 <%= render :partial => 'app/qgarage' %>
+<%= render :partial => 'app/cctv_storage' %>
