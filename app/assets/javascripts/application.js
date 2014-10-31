@@ -21,6 +21,18 @@ $(document).ready(function() {
 		$(".mobile-nav").toggleClass('open');
 	});
 
+	$('#products').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-products").addClass("active");
+
+	  if (direction == 'up') {
+	  	$(".header-secondary").slideUp(100);
+	  } else {
+	  	$(".header-secondary").slideDown(100);
+	  }
+
+	});
+
 });
 
 $(window).resize(function() {

@@ -10,7 +10,7 @@
 </section>
 <section id="phone">
 	<div class="phone-number">
-	asd
+	
 	</div>
 </section>
 
@@ -60,7 +60,15 @@
 
 			<div class="col-md-8">
 				<div class="row">
-				
+					<div class="col-sm-4">
+						<div class="panel-red">
+							<%= image_tag "ai/4k.png", :class=>"responsive" %>
+							
+							<h3 class="center">4K Ultra HD</h3>
+							<p class=" center">High definition outdoor cameras for IP streaming.</p>
+							<a href="http://www.acumenin.com/products/aip/box/b84n-bahrain" target="_blank" class="btn btn-lg btn-block btn-default">See All Models » </a>
+						</div>
+					</div>				
 					<div class="col-sm-4">
 						<div class="panel-red">
 							<%= image_tag "ai/aip.png", :class=>"responsive" %>
@@ -70,6 +78,7 @@
 							<a href="http://www.acumenin.com/products/aip" target="_blank" class="btn btn-lg btn-block btn-default">See All Models » </a>
 						</div>
 					</div>
+
 					<div class="col-sm-4">
 						<div class="panel-red">
 							<%= image_tag "ai/analogue.png", :class=>"responsive" %>
@@ -79,15 +88,7 @@
 							<a href="http://www.acumenin.com/products/ai" target="_blank" class="btn btn-lg btn-block btn-default">See All Models » </a>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="panel-red">
-							<%= image_tag "ai/4k.png", :class=>"responsive" %>
-							
-							<h3 class="center">4K Ultra HD</h3>
-							<p class=" center">High definition outdoor cameras for IP streaming.</p>
-							<a href="http://www.acumenin.com/products/aip/box/b84n-bahrain" target="_blank" class="btn btn-lg btn-block btn-default">See All Models » </a>
-						</div>
-					</div>
+
 				</div>	
 				<!-- Video & Software -->
 				<div class="row">
@@ -112,12 +113,13 @@
 
 		</div>
 		<div class="row">
-			<div class="col-sm-3">
-				<h2 class="">Upcoming Products</h2>
-				<p class="lead">SYNQ has several projects on the go to bring convenience, tech, safety, and security to your home or workplace.</p>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-5">
+				<h1 class="">Upcoming Products</h1>
+				<p class="lead">SYNQ is always innovating. Here are some of the products that will define the future of SYNQ.</p>
 			</div>
 			
-			<div class="col-sm-3">
+			<div class="col-sm-5">
 				<div class="panel panel-thumb">
 					<%= image_tag "qdrive.png", :class=>"responsive" %>
 					<hr>
@@ -126,24 +128,8 @@
 					<a data-toggle="modal" data-target="#AppModalQDrive" class="btn btn-lg btn-block btn-default">Learn More » </a>
 				</div>
 			</div>
-			<div class="col-sm-3">
-				<div class="panel panel-thumb">
-					<%= image_tag "construction.png", :class=>"responsive" %>
-					<hr>
-					<h3 class="center">QWatch</h3>
-					<p class="lead center">Site monitoring from the comfort of anywhere.</p>
-					<a data-toggle="modal" data-target="#AppModalQWatch" class="btn btn-lg btn-block btn-default">Learn More » </a>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="panel panel-thumb">
-					<%= image_tag "qgarage.png", :class=>"responsive" %>
-					<hr>
-					<h3 class="center">QGarage</h3>
-					<p class="lead center">Monitor your ride from anywhere in the world.</p>
-					<a data-toggle="modal" data-target="#AppModalQGarage" class="btn btn-lg btn-block btn-default">Learn More » </a>
-				</div>
-			</div>
+			<div class="col-sm-1"></div>
+
 			
 		</div>
 	</div>
@@ -155,7 +141,7 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<h2 class="center">Top Clients</h2>
-				<p class="lead">We offer our services to several high-profile businesses within British Columbia.</p>
+				<p class="lead center">We offer our services to several high-profile businesses across Canada.</p>
 				<hr>
 			</div>
 			<div class="col-md-2"></div>
@@ -176,13 +162,43 @@
 		<div class="clearfix"></div>
 	</div>
 </section>
-<div class="footer">
+<section class="footer">
 
-	<div class="content">
-		<
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<h1 class="center">Contact Us</h1>
+			<p class="lead center">Get in touch with SYNQ</p>
+			<hr>
+		</div>
+		<div class="col-sm-3"></div>
 	</div>
+		<div class="row center">
 
-</div>
+			<div class="col-xs-0 col-sm-3"></div>
+			<div class="col-xs-4 col-sm-2"><a href="mailto:nolan@synqtech.com"><i class="fa fa-envelope-o"></i><br>nolan@synqtech.com</a></div>
+			<div class="col-xs-4 col-sm-2"><a href="tel:7784402005"><i class="fa fa-phone"></i><br>(778) 440-2005</a></div>
+			<div class="col-xs-4 col-sm-2"><a href="http://www.twitter.com/synqaccess" target="_blank"><i class="fa fa-twitter"></i><br>@SynqAccess</a></
+			<div class="col-xs-0 col-sm-3"></div>
+
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+			<hr>
+				<div class="well center">
+					<strong>SYNQ Technology</strong><br>
+					1075 Pandora Ave.<br>
+					Victoria, BC
+				</div>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+	</div>
+	
+
+</section>
 
 <%= render :partial => 'app/qwatch' %>
 <%= render :partial => 'app/qdrive' %>
