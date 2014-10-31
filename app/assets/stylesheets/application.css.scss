@@ -131,6 +131,13 @@ nav {
 	background-image: -ms-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
 	background-image: linear-gradient(-180.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
 }
+.header-fade-flip {
+	/* Rectangle 6: */
+	background-image: -o-linear-gradient(91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -moz-linear-gradient(91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -ms-linear-gradient(91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: linear-gradient(180.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+}
 .header-fade-dark {
 	/* Rectangle 6: */
 	background-image: -o-linear-gradient(-91.5deg, rgba(65, 165, 233, 0.8) 83%, rgba(54, 135, 197, 0.8) 100%);
@@ -426,5 +433,17 @@ section {
 		color: #fff;
 		background: rgba(0,0,0,.25);
 		border: none;
+	}
+	.btn {
+		background: rgba(00,0,0,.25);
+		border: rgba(0,0,0,.5);
+		color: #fff;
+		i {
+			font-size: inherit;
+		}
+		&:hover {
+			background: rgba(0,0,0,.55);
+			color: #fff;
+		}
 	}
 }

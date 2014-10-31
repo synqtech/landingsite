@@ -1,11 +1,23 @@
 <%= render :partial => 'layouts/navs' %>
-<section id="logo-name">
+<section id="logo-name" id="top">
 	<%= image_tag 'logo-large.svg', :class=>"center-img" %>
 	<div class="desc-imgs">
 		<%= image_tag 'lead/security.png' %>
 		<%= image_tag 'lead/cctv.png' %>
 		<%= image_tag 'lead/service.png' %>
 		<%= image_tag 'lead/barcode.png' %>
+	</div>
+</section>
+<section id="about" class="header-fade-flip">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				
+			</div>
+			<div class="col-sm-6">
+				<h1 class="center">(778) 440-2005</h1>
+			</div>
+		</div>
 	</div>
 </section>
 <section id="phone">
@@ -18,7 +30,7 @@
 	<h1>Products &amp; Services</h1>
 </section>
 
-<section class="feature">
+<section class="feature" id="cctv">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">
@@ -40,7 +52,7 @@
 </section>
 
 
-<section class="feature">
+<section class="feature" id="cameras">
 	<div class="container">
 		<div class="overlay"></div>
 		<!-- Camera Models -->
@@ -107,7 +119,7 @@
 	
 </section>
 
-<section id="apps" class="apps feature">
+<section id="upcoming" class="apps feature">
 	<div class="container">
 		<div class="row">
 
@@ -162,7 +174,7 @@
 		<div class="clearfix"></div>
 	</div>
 </section>
-<section class="footer">
+<section class="footer" id="contact">
 
 	<div class="container">
 	<div class="row">
@@ -192,11 +204,16 @@
 					1075 Pandora Ave.<br>
 					Victoria, BC
 				</div>
+
+				<br>
+
+				<center><a href="#top" class="btn btn-dark btn-lg">
+					Back To Top <i class="fa fa-hand-o-up"></i>
+				</button></a>
 			</div>
 			<div class="col-sm-3"></div>
 		</div>
 	</div>
-	
 
 </section>
 

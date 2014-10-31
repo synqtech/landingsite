@@ -17,13 +17,34 @@
 //= require_tree .
 
 $(document).ready(function() {
+
+	$('.header-secondary').hide();
+
 	$(".action-left").click(function() {
 		$(".mobile-nav").toggleClass('open');
-	});
+	}, { offset: 400 });
 
-	$('#products').waypoint(function(direction) {
+	$('body').waypoint(function(direction) {
 	  $(".active").removeClass("active");
-	  $(".nav-products").addClass("active");
+	}, { offset: 400 });
+
+	$('#about').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-about").addClass("active");
+	}, { offset: 400 });
+
+	$('#cameras').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-cameras").addClass("active");
+	}, { offset: 400 });
+	$('#upcoming').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-upcoming").addClass("active");
+	}, { offset:400 });
+
+	$('#cctv').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-cctv").addClass("active");
 
 	  if (direction == 'up') {
 	  	$(".header-secondary").slideUp(100);
@@ -31,6 +52,21 @@ $(document).ready(function() {
 	  	$(".header-secondary").slideDown(100);
 	  }
 
+	});
+
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
 	});
 
 });
