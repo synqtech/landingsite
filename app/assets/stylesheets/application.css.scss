@@ -31,6 +31,15 @@ h1, h2, h3 {
 nav {
 
 }
+.contact-wrap {
+	border-radius: 5px; 
+	background: rgba(38, 155, 220, 0.6);
+	
+	padding: 20px;
+	a {
+		color: #fff !important;
+	}
+}
 .sm-menu {
 	float: right;
 	margin: 0px;
@@ -133,10 +142,10 @@ nav {
 }
 .header-fade-flip {
 	/* Rectangle 6: */
-	background-image: -o-linear-gradient(91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: -moz-linear-gradient(91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: -ms-linear-gradient(91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: linear-gradient(180.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -o-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -moz-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -ms-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: linear-gradient(1.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
 }
 .header-fade-dark {
 	/* Rectangle 6: */
@@ -150,11 +159,12 @@ section {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	.desc-imgs {
+		text-align: center;
 		img {
-			display: inline-block;
+			display: inline;
 			width: 23%;
-			max-width: 80px;
-
+			float: none;
+			max-width: 100px;
 
 		}
 		
@@ -177,6 +187,10 @@ section {
 }
 
 .hero {
+	padding: 100px 0px;
+
+}
+.blue {
 	background-image: -o-linear-gradient(-89deg, #53C2FD 0%, #284CAE 100%);
 	background-image: -moz-linear-gradient(-89deg, #53C2FD 0%, #284CAE 100%);
 	background-image: -ms-linear-gradient(-89deg, #53C2FD 0%, #284CAE 100%);
@@ -184,9 +198,6 @@ section {
 	height: 300px;
 	padding-top: 50px;
 	padding-bottom: 50px;
-
-
-
 }
 .phone {
 	background: #284CAE;
@@ -199,7 +210,7 @@ section {
 }
 .feature {
 
-	&:nth-child(odd) {
+	&:nth-child(even) {
 		background: #f4f4f4;
 	}
 	padding-top: 50px;
@@ -397,7 +408,10 @@ section {
 }
 .center-img {
 	display: block;
-	margin: 0px auto;
+	margin: 100px auto;
+	width: 90%;
+	min-width: 200px;
+	max-width: 640px;
 }
 .container-half-l {
 	width: 100%;
