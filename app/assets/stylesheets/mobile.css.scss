@@ -11,7 +11,7 @@ html * {
 	height: 50px;
 	width: 100%;
 }
-.mobile-nav .logo > img {
+.mobile-nav .logo > a > img {
 	display: block;
 	margin: 0px auto;
 	float: none;
@@ -98,10 +98,10 @@ html * {
 
 
 .nav-contents {
-	background: rgba(0,0,0,0.25);
+	background: rgba(54, 135, 197, 0.89);
 	height: 53px;
 	margin-top: 0px;
-	width: 100%;
+	width: 700px;
 	overflow-y: hidden;
 	padding: 3px;
 }

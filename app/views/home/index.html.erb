@@ -1,5 +1,6 @@
 <%= render :partial => 'layouts/navs' %>
-<section id="logo-name hero" id="top">
+<a id="backtotop"></a>
+<section id="logo-name hero">
 	<%= image_tag 'logo-large.svg', :class=>"center-img" %>
 	<div class="desc-imgs" style="text-align: center !important;">
 		<center>
@@ -25,22 +26,33 @@
 				</div>
 			</div>
 		</div>
-
+		<hr class="ghost">
 		<div class="row">
 			<div class="col-sm-4">
+				<center>
+					<span class="fa fa-tachometer header-icon"></span>
+					<h4 class="light">We Push The Industry</h4>
+					<p>We work directly with insurance companies as well as manufacturers like Acumen to bring the future of security technology to life.
+					</p>
+				</center>
+			</div>
+
+			<div class="col-sm-4">
+				<center>
+				<span class="fa fa-video-camera header-icon"></span>
 				<h4 class="light">We Bring The Big Picture</h4>
 				<p>SYNQ offers a range of 2MP, 5MP, and 4K (33 MP) cameras. Only two manufacturers produce affordable ultra-HD cameras: Sony and Acumen. SYNQ is proud to supply both.
 				</p>
+				</center>
 			</div>
+			
 			<div class="col-sm-4">
-				<h4 class="light">We Push The Industry</h4>
-				<p>We work directly with insurance companies as well as manufacturers like Acumen to bring the future of security technology to life.
-				</p>
-			</div>
-			<div class="col-sm-4">
-				<h4 class="light">We Offer Uniqueness</h4>
-				<p>We bring effective products to the industry that our competitors haven't even touched. From the highest quality cameras to specialized servers, to our 100% Canadian-made EAS tags, we're proud to offer what no one else has.
-				</p>
+				<center>
+					<span class="fa fa-lightbulb-o header-icon"></span>
+					<h4 class="light">We Offer Uniqueness</h4>
+					<p>We bring effective products to the industry that our competitors haven't even touched. From the highest quality cameras to specialized servers, to our 100% Canadian-made EAS tags, we're proud to offer what no one else has.
+					</p>
+				</center>
 			</div>
 		</div>
 
@@ -222,7 +234,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<%= image_tag "eas/large-graphic.png", :class=>"responsive" %>
+				<%= image_tag "eas/large-graphic.png", :class=>"responsive", :style=>"width: 100%; height: auto; max-width: 400px;" %>
 			</div>
 
 		</div>
@@ -236,35 +248,61 @@
 
 			</div>
 			<div class="col-sm-2"></div>
+			<hr class="ghost">
 		</div>
 		<div class="row bordered">
-			
 
-
-			<div class="col-xs-5 col-md-3 center">
+			<div class="col-xs-6 col-md-3 panel-thumb center">
 				<%= image_tag 'eas/1.png', :class=>"responsive" %>
 				<h4 class="light">Tagged Marchandise</h4>
 				<p class="light">Simply print directly on SYNQ’s Hi-Frequency tags and label your products.</p>
 			</div>
 
-			<div class="col-xs-5 col-md-3 center">
+			<div class="col-xs-6 col-md-3 panel-thumb center">
+				<%= image_tag 'eas/2.png', :class=>"responsive" %>
+				<h4 class="light">Theft Occurs</h4>
+				
+				<p class="light">SYNQ's specialized EAS gate detects a shoplifter with an active hi-frequency tag and sounds the alarm.</p>
+
+			</div>
+
+			<div class="col-xs-6 col-md-3 panel-thumb center">
+				<%= image_tag 'eas/3.png', :class=>"responsive" %>
+				<h4 class="light">Receive Notification</h4>
+				<p class="light">Receive video notification starting 2 seconds before thief exits through the gate.</p>
+			</div>
+
+			<div class="col-xs-6 col-md-3 panel-thumb center">
+				<%= image_tag 'eas/4.png', :class=>"responsive" %>
+				<h4 class="light">Review &amp; Apprehend</h4>
+				<p class="light">Review the clear footage of the thief and act accordingly.</p>
+			</div>
+
+
+<!-- 			<div class="col-xs-6 col-md-3 center">
 				<%= image_tag 'eas/2.png', :class=>"responsive" %>
 				<h4 class="light">Theft Occurs</h4>
 				<p class="light">If theft occurs, the gate’s alarm will sound off as usual.</p>
 			</div>
 
-			<div class="col-xs-5 col-sm-6 col-md-3 center">
+			<div class="col-xs-6 col-sm-6 col-md-3 center">
 				<%= image_tag 'eas/3.png', :class=>"responsive" %>
 				<h4 class="light">Receive Video Notification</h4>
 				<p class="light">Receive video notification starting 2 seconds before thief exits through the gate.</p>
 			</div>
 
-			<div class="col-xs-5 col-sm-6 col-md-3 center">
+			<div class="col-xs-6 col-sm-6 col-md-3 center">
+				<%= image_tag 'eas/3.png', :class=>"responsive" %>
+				<h4 class="light">Receive Video Notification</h4>
+				<p class="light">Receive video notification starting 2 seconds before thief exits through the gate.</p>
+			</div> -->
+<!-- 
+			<div class="col-xs-6 col-sm-6 col-md-3 center">
 				<%= image_tag 'eas/4.png', :class=>"responsive" %>
 				<h4 class="light">Review &amp; Apprehend</h4>
 				<p class="light">Review the clear footage of the thief and act accordingly.</p>
 			</div>
-		</div>
+ -->		</div>
 			
 	</div>
 	<div class="clearfix"></div>
@@ -331,9 +369,7 @@
 
 				<br>
 
-				<center><a href="#top" class="btn btn-dark btn-lg">
-					Back To Top <i class="fa fa-hand-o-up"></i>
-				</button></a>
+				<center><a href="#backtotop" class="btn btn-dark btn-lg">Back To Top <i class="fa fa-hand-o-up"></i></button></a>
 			</div>
 			<div class="col-sm-3"></div>
 		</div>
