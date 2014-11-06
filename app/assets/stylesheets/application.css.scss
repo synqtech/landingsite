@@ -21,9 +21,13 @@ body {
 }
 
 h1, h2, h3 {
-	font-weight: 900;
+	font-weight: 100;
+	color: #269bdc;
 	&.light {
 		color: #fff;
+	}
+	&.red {
+		color: red;
 	}
 }
 
@@ -31,11 +35,24 @@ h1, h2, h3 {
 nav {
 
 }
+
+.light {
+	color: #269bdc !important;
+}
+.row.bordered{
+	border: 2px solid lighten(#269bdc, 40%);
+	border-radius: 5px;
+}
 .contact-wrap {
 	border-radius: 5px; 
 	background: rgba(38, 155, 220, 0.6);
-	
+	width: auto;
+	margin: 0px auto 25px auto;
 	padding: 20px;
+	color: #fff !important;
+	h1 {
+		color: #fff !important;
+	}
 	a {
 		color: #fff !important;
 	}
@@ -210,7 +227,7 @@ section {
 }
 .feature {
 
-	&:nth-child(even) {
+	&:nth-child(odd) {
 		background: #f4f4f4;
 	}
 	padding-top: 50px;
@@ -278,20 +295,35 @@ section {
 }
 
 .panel {
-
+	.panel-header {
+		img {
+			height: 150px;
+			width: auto;
+			padding: 20px;
+		}
+		background-size:cover !important;
+		background-position: center center;
+	}
+	.panel-body {
+		padding: 25px;
+		h3 {
+			margin: 0px;
+			font-size: 1.3em;
+		}
+	}
 	&.panel-thumb {
 		// border-radius: 5px;
 		img {
 			max-width: 180px;
-			width: 100%;
+			
 			display:block;
-			margin: 20px auto;
+			
 
 			/* TRANSITION ITEMS */
-			-webkit-filter: saturate(0);
-			-moz-filter: saturate(0);
-			-ms-filter: saturate(0);
-			filter: saturate(0%);
+			// -webkit-filter: saturate(0);
+			// -moz-filter: saturate(0);
+			// -ms-filter: saturate(0);
+			// filter: saturate(0%);
 			opacity: 0.5;
 
 			-webkit-transition: 200ms;
@@ -315,7 +347,7 @@ section {
   			background-color: #a4a4a4;
   			color: #fff;
   			border: 5px solid #fff !important;
-  			
+  			cursor: pointer !important;
   			&:hover {	
   				background-color: #aeaeae;
   				color: #fff;
@@ -330,7 +362,7 @@ section {
 .panel-dark {
 	@extend .panel.panel-thumb;
 	background: rgba(0,0,0,.25);
-	border: none !important;
+	border: 1px solid #d8d8d8;
 	// border-radius: 8px !important;
 	padding: 5px !important;
 	color: #fff;
@@ -348,7 +380,7 @@ section {
 .panel-red {
 	@extend .panel.panel-thumb;
 	background: rgba(255,255,255,0.5);
-	border: none !important;
+	border: 1px solid #d8d8d8;
 	border-radius: 7px !important;
 	padding: 5px !important;
 	color: #6a6a6a;
@@ -357,7 +389,7 @@ section {
 		color: red;
 	}
 	img {
-		opacity: 1;
+		opacity: 0.8;
 	}
 
 	.btn {
@@ -397,6 +429,14 @@ section {
 		
 		float: none;
 	}
+	img {
+		opacity: 1 !important;
+	}
+
+	.row.bordered{
+		border: 0px solid #269bdc;
+		border-radius: 5px;
+	}
 }
 
 .responsive {
@@ -428,9 +468,12 @@ section {
 	
 }
 .footer {
-	color: white;
+	color: white !important;
 	background: #40a4e8;
 	max-width: 100%;
+	h1 {
+		color: #fff !important;
+	}
 	hr {
 		border: 1px solid  rgba(255,255,255,.25);
 	}

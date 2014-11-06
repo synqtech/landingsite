@@ -2,12 +2,27 @@
 <div class="modal fade" id="CCTVModal" tabindex="-1" role="dialog" aria-labelledby="CCTVModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header" style="background: url(<%= image_url 'svr/wide.jpg' %>) center center no-repeat">
+      <div class="modal-header" style="background: url(<%= image_url 'blur/wide.jpg' %>) center center no-repeat">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <!-- <h4 class="modal-title" id="CCTVModalLabel">Modal title</h4> -->
-        <h1 class="center light">Specs</h1>
+        <%= image_tag "qcctv.png", :class=>"responsive" %>
       </div>
       <div class="modal-body">
+
+        
+          
+            <h1>Long Term CCTV Recording</h1>
+            <p class="lead">We offer a cost-effective solution for storing CCTV footage for up to one year, without compromising video quality, or using secondary streams.</p>
+        
+            <%= image_tag 'svr/synq-box.jpg', :style=>"width: 100% !important; max-width: 960px;" %>
+            <p>A CCTV monitoring system can provide a number of benefits to your business. However, we have learned that in this industry, one of the most significant issues our clients face with their monitoring systems is data retention that is cost effecitve.</p>
+            <p>Today, most CCTV Monitoring sytems hold data for a maximum of 2-3 months, and this presents several liability issues ranging from slips, trips and falls in the workplace, to assault and false arrest accusations toward loss prevention officers.</p>
+            <p>Synq Access and Security Technology has recognized this as a major issue in our field, and we now have the ability to offer you a solution for the data retention you need, without compromising on video quality or using secondary streams.</p>
+            <p>We do this by directly working with manufacturers to bring you a cost effective platform, customized for the CCTV and Security industry. As one of the only companies in Canada able to offer this solution, Synq Access and Security Technology stands out as a unique company that is committed to meeting your company's security needs</p>
+          
+
+        
+
           
         <h3>General</h3>
         <table class="table table-striped">
@@ -127,14 +142,18 @@
             *Over 2TB of drive support<br/>
             *Energy efficient: Staggered drive spinup reduces power on startup<br/>
             *3 year warranty<br/>
-            
           </div>
 
+
+          <h2>Subscription Service Also Available</h2>
+          <p class="lead">All the benetits of your own server, one monthly payment.</p>
+          <%= image_tag 'more/subscription.png', :class=>"responsive" %>
+          <hr>
           <p class="small">Contact Us Today!</p>
           <h2>778-440-2005</h2>
-          <a href="mailto:nolan@synqtech.com">nolan@synqtech.com</a>
+          <a href="mailto:contact@synqtech.com">contact@synqtech.com</a>
 
-        </center> 
+        </center>
         
       </div>
       <div class="modal-footer">

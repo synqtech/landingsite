@@ -22,35 +22,53 @@ $(document).ready(function() {
 
 	$(".action-left").click(function() {
 		$(".mobile-nav").toggleClass('open');
-	}, { offset: 400 });
+	});
 
 	$('body').waypoint(function(direction) {
 	  $(".active").removeClass("active");
-	}, { offset: 400 });
+	}, { offset: 0 });
 
 	$('#about').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-about").addClass("active");
-	}, { offset: 400 });
+	}, { offset: 0 });	
 
 	$('#cameras').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-cameras").addClass("active");
-	}, { offset: 400 });
-	$('#upcoming').waypoint(function(direction) {
-	  $(".active").removeClass("active");
-	  $(".nav-upcoming").addClass("active");
-	}, { offset:400 });
+	}, { offset: 0 });
 
-	$('#cctv').waypoint(function(direction) {
+	$('#eas').waypoint(function(direction) {
 	  $(".active").removeClass("active");
-	  $(".nav-cctv").addClass("active");
+	  $(".nav-eas").addClass("active");
+	}, { offset: 0 });
+
+	$('#cameras').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-cameras").addClass("active");
+	}, { offset: 0 });
+
+	$('#contact').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-contact").addClass("active");
+	}, { offset: 500 });
+	
+	
+
+	$('#products').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-products").addClass("active");
 
 	  if (direction == 'up') {
 	  	$(".header-secondary").slideUp(100);
 	  } else {
 	  	$(".header-secondary").slideDown(100);
 	  }
+	}, { offset:0 });
+
+	$('#cctv').waypoint(function(direction) {
+	  $(".active").removeClass("active");
+	  $(".nav-cctv").addClass("active");
 
 	});
 

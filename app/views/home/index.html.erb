@@ -11,9 +11,11 @@
 	</div>
 </section>
 <section id="about" class="header-fade-flip">
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
+				<h3 class="light">About Synq</h3>
 				<p class="lead">SYNQ brings you state of the art security technology that is easy to use, with competitive pricing. From retail, to construction, to your own home, we bring peace of mind at unbeatable prices.</p>
 			</div>
 			<div class="col-sm-6">
@@ -23,34 +25,108 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<h4 class="light">We Bring The Big Picture</h4>
+				<p>SYNQ offers a range of 2MP, 5MP, and 4K (33 MP) cameras. Only two manufacturers produce affordable ultra-HD cameras: Sony and Acumen. SYNQ is proud to supply both.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<h4 class="light">We Push The Industry</h4>
+				<p>We work directly with insurance companies as well as manufacturers like Acumen to bring the future of security technology to life.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<h4 class="light">We Offer Uniqueness</h4>
+				<p>We bring effective products to the industry that our competitors haven't even touched. From the highest quality cameras to specialized servers, to our 100% Canadian-made EAS tags, we're proud to offer what no one else has.
+				</p>
+			</div>
+		</div>
+
 	</div>
 </section>
 
-<section id="products" class="title" style="background-image: url(<%= image_url 'large/acumen.jpg'%>)">
-	<h1>Products &amp; Services</h1>
-</section>
 
-<section class="feature" id="cctv">
+<section id="products" class="apps feature">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4">
-				<h1>Long Term CCTV Recording</h1>
-				<p class="lead">We offer a cost-effective solution for storing CCTV footage for up to one year, without compromising video quality, or using secondary streams.</p>
-				<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Specifications »</a>
-				<%= image_tag 'cctv.png', :class=>"responsive" %>
-			</div>
-			<div class="col-sm-8">
-				<%= image_tag 'svr/synq-box.jpg', :style=>"width: 100% !important; max-width: 960px;" %>
-				<p>A CCTV monitoring system can provide a number of benefits to your business. However, we have learned that in this industry, one of the most significant issues our clients face with their monitoring systems is data retention that is cost effecitve.</p>
-				<p>Today, most CCTV Monitoring sytems hold data for a maximum of 2-3 months, and this presents several liability issues ranging from slips, trips and falls in the workplace, to assault and false arrest accusations toward loss prevention officers.</p>
-				<p>Synq Access and Security Technology has recognized this as a major issue in our field, and we now have the ability to offer you a solution for the data retention you need, without compromising on video quality or using secondary streams.</p>
-				<p>We do this by directly working with manufacturers to bring you a cost effective platform, customized for the CCTV and Security industry. As one of the only companies in Canada able to offer this solution, Synq Access and Security Technology stands out as a unique company that is committed to meeting your company's security needs</p>
+
+		</div>
+		<div class="row">
+			<h1 class="center">Products &amp; Services</h1>
+				<p class="lead center">SYNQ is committed to building a close relationship between smartphones and security. We use smartphones to take advantage of immediate notification, and provide convenience for CCTV monitoring. </p>
+				<hr>
+			<div class="col-lg-3 col-xs-6">
+
+				
+
+				<div class="panel panel-thumb">
+					<div class="panel-header" style="background: url(<%= image_url 'blur/qdrive.jpg' %>)">
+						<%= image_tag "qdrive.png", :class=>"responsive" %>
+					</div>
+
+					
+					<div class="panel-body">
+						<h3>QDrive</h3>
+						<p>Lock out distracted driving for good.</p>
+					</div>
+					<a data-toggle="modal" data-target="#AppModalQDrive" class="btn btn-lg btn-block btn-default">Learn More » </a>
+				</div>
 			</div>
 
+			<div class="col-lg-3 col-xs-6">
+				<div class="panel panel-thumb">
+					<div class="panel-header" style="background: url(<%= image_url 'blur/qgarage.jpg' %>)">
+						<%= image_tag "qgarage.png", :class=>"responsive" %>
+					</div>
+
+					
+					<div class="panel-body">
+						<h3>QGarage</h3>
+						<p>A huge forward leap in security for underground parking.</p>
+					</div>
+					<a data-toggle="modal" data-target="#AppModalQDrive" class="btn btn-lg btn-block btn-default">Learn More » </a>
+				</div>
+			</div>
+
+		
+			<div class="col-lg-3 col-xs-6">
+				<div class="panel panel-thumb">
+					<div class="panel-header" style="background: url(<%= image_url 'blur/wide.jpg' %>)">
+						<%= image_tag "qcctv.png", :class=>"responsive" %>
+					</div>
+
+					
+					<div class="panel-body">
+						<h3>CCTV Storage</h3>
+						<p>Subscriptions &amp; servers to record up to <strong>1 year</strong> at full resolution.</p>
+					</div>
+					<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Learn More » </a>
+				</div>
+			</div>
+
+		
+			<div class="col-lg-3 col-xs-6">
+				<div class="panel panel-thumb">
+					<div class="panel-header" style="background: url(<%= image_url 'blur/lpo.jpg' %>)">
+						<%= image_tag "qdrive.png", :class=>"responsive", :style=>"opacity: 0 !important;" %>
+					</div>
+
+					
+					<div class="panel-body">
+						<h3>Loss Prevention</h3>
+						<p>Cutting-edge technology to guard against retail theft.</p>
+					</div>
+					<a href="#eas" class="btn btn-lg btn-block btn-default">Learn More » </a>
+				</div>
+			</div>
+
+		
+			
 		</div>
 	</div>
 </section>
-
 
 <section class="feature" id="cameras">
 	<div class="container">
@@ -59,7 +135,7 @@
 
 		<div class="row">
 			<div class="col-md-4"  style="border-left: 4px solid red;">
-				<h1 class="">Security Cameras</h1>
+				<h1 class="red">Security Cameras</h1>
 				<p class="lead">SYNQ is Canada's only supplier of Acumen security cameras and CCTV systems.</p>
 				<%= image_tag 'ai/acumen.png', :class=>"responsive" %>
 				<hr>
@@ -101,7 +177,7 @@
 						</div>
 					</div>
 
-				</div>	
+				</div>
 				<!-- Video & Software -->
 				<div class="row">
 					<div class="col-sm-12">
@@ -119,32 +195,80 @@
 	
 </section>
 
-<section id="upcoming" class="apps feature">
+<section class="feature" id="eas">
 	<div class="container">
-		<div class="row">
+		
 
-		</div>
 		<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-5">
-				<h1 class="">Upcoming Products</h1>
-				<p class="lead">SYNQ is always innovating. Here are some of the products that will define the future of SYNQ.</p>
-			</div>
-			
-			<div class="col-sm-5">
-				<div class="panel panel-thumb">
-					<%= image_tag "qdrive.png", :class=>"responsive" %>
-					<hr>
-					<h3 class="center">QDrive</h3>
-					<p class="lead center">A replacement for your keys; a revolution in road safety.</p>
-					<a data-toggle="modal" data-target="#AppModalQDrive" class="btn btn-lg btn-block btn-default">Learn More » </a>
+			<div class="col-md-6" style="border-left: 4px solid #00aeee;">
+				<h2>EAS Systems</h2>
+				<p class="lead">State of the Art Article Surveillance Systems</p>
+
+				<p>SYNQ is proud to supply the only EAS labels compatible with meat printers. In the event of shoplifting, a push notification will immediately be sent to any party’s phone with access to a video clip 2-seconds prior to the offense.</p>
+
+				<h3>Ultra-Compatible</h3>
+				<p>SYNQ’s Electronic Article Surveillance tags are compatible with Digi, Hobart, Bizerba, and Ishida meat label printers. Getting started is as simple as changing label paper.</p>
+
+
+				<div class="row">
+					<div class="col-sm-6">
+						<h3 class="light">Hi-Frequency</h3>
+						<p>SYNQ’s very own hi-frequency tags are low-profile, discreet, and effective. Best of all, they are produced in Canada.</p>
+					</div>
+					<div class="col-sm-6">
+						<h3 class="light">Low-Frequency</h3>
+						<p>SYNQ works closely with Tag-It EAS for low frequency tags.</p>
+					</div>
 				</div>
 			</div>
-			<div class="col-sm-1"></div>
+			<div class="col-md-6">
+				<%= image_tag "eas/large-graphic.png", :class=>"responsive" %>
+			</div>
 
-			
 		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<h2 class="center">How It Works</h2>
+				<p class="lead center">SYNQ's unique approach to EAS works by combining our discreet Hi-Frequency labels with smart camera technology to bring you video of suspicious incidents exactly when you need it.</p>
+
+
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+		<div class="row bordered">
+			
+
+
+			<div class="col-xs-5 col-md-3 center">
+				<%= image_tag 'eas/1.png', :class=>"responsive" %>
+				<h4 class="light">Tagged Marchandise</h4>
+				<p class="light">Simply print directly on SYNQ’s Hi-Frequency tags and label your products.</p>
+			</div>
+
+			<div class="col-xs-5 col-md-3 center">
+				<%= image_tag 'eas/2.png', :class=>"responsive" %>
+				<h4 class="light">Theft Occurs</h4>
+				<p class="light">If theft occurs, the gate’s alarm will sound off as usual.</p>
+			</div>
+
+			<div class="col-xs-5 col-sm-6 col-md-3 center">
+				<%= image_tag 'eas/3.png', :class=>"responsive" %>
+				<h4 class="light">Receive Video Notification</h4>
+				<p class="light">Receive video notification starting 2 seconds before thief exits through the gate.</p>
+			</div>
+
+			<div class="col-xs-5 col-sm-6 col-md-3 center">
+				<%= image_tag 'eas/4.png', :class=>"responsive" %>
+				<h4 class="light">Review &amp; Apprehend</h4>
+				<p class="light">Review the clear footage of the thief and act accordingly.</p>
+			</div>
+		</div>
+			
 	</div>
+	<div class="clearfix"></div>
+	
 </section>
 
 <section class="feature dark brands">
