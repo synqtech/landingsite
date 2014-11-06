@@ -194,9 +194,11 @@ section {
 		text-align: center;
 		img {
 			display: inline;
-			width: 23%;
+			width: 10%;
 			float: none;
-			max-width: 100px;
+			max-width: 80px;
+			margin: 0px 10px 40px 10px;
+			min-width: 50px;
 
 		}
 		
@@ -547,6 +549,7 @@ section {
 		font-size: .8em;
 		padding: 12px !important;
 		margin: 0px;
-		
+
 	}
+	div[class^="col"]{padding-left:10px; padding-right:10px;}
 }
