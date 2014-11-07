@@ -16,7 +16,17 @@
 //= require turbolinks
 //= require_tree .
 
+function setHalfWidth() {
+	if (window.innerWidth >= 768) {
+		$(".inner-half-width").css('width', $(".container").width()/2-30+'px');
+	} else {
+		$(".inner-half-width").css('width', '100%');
+	}
+	
+}
+
 $(document).ready(function() {
+	setHalfWidth();
 
 	$('.header-secondary').hide();
 
@@ -90,7 +100,6 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-	$("iframe.video").each(function() {
-		$(this).css('height', $(this).width*9/16+'px');
-	});
+
+	setHalfWidth();
 })

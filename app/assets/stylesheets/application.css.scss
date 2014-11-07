@@ -35,12 +35,6 @@ h1, h2, h3 {
 nav {
 
 }
-span.header-icon {
-	color: #ccc;
-	text-shadow: 0px 1px #fff;
-	font-size: 4em;
-	text-align: center;
-}
 
 .light {
 	color: #269bdc !important;
@@ -49,17 +43,21 @@ span.header-icon {
 	border: 2px solid lighten(#269bdc, 40%);
 	border-radius: 5px;
 	padding: 25px !important;
+	background: #fff !important;
 }
 .contact-wrap {
-	border-radius: 5px; 
-	background: rgba(38, 155, 220, 0.6);
+	
 	width: auto;
 	margin: 0px auto 25px auto;
 	padding: 20px;
 	color: #fff !important;
-	border: 2px solid #fff;
-	box-shadow: inset 0px 0px 40px #269bdc, 0px 1px 10px rgba(0,0,0,.05);
+	width: 80%;
+	
 	h1 {
+		color: #fff !important;
+		margin-top: 0px !important;
+	}
+	h3 {
 		color: #fff !important;
 	}
 	a {
@@ -176,6 +174,68 @@ span.header-icon {
 	border-top: 1px solid #d8d8d8;
 	border-bottom: 1px solid #d8d8d8;
 }
+.header-fade-blue-flip {
+	background: #2cb4ff; /* Old browsers */
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+.hero-about {
+	
+	min-width: 320px;
+	background: #269BDC;
+	width: 50%;
+	float: left;
+
+	box-sizing: border-box;
+
+	h3 {
+		color:#fff !important;
+	}
+	color: lighten(#269bdc, 40%);	
+
+	padding: 50px 0px 50px 0;
+
+	.inner-half-width {
+		padding-right: 25px;
+		float: right;
+	}
+
+}
+.hero-contact {
+	
+	box-sizing: border-box;
+	
+	color:#fff;
+		
+	width: 50%;
+	min-width: 320px;
+	float: left;
+
+	padding: 50px 0px 0px 0;
+	
+	.inner-half-width {
+		float: left;
+		padding-left: 25px;	
+	}
+}
+.brags {
+	background: #2390CC;
+	.brag {
+		h4 { color: #fff !important}
+		color: lighten(#269bdc, 40%);
+		padding-bottom: 50px;
+		padding-top: 50px;
+
+		span.header-icon {
+			color: #2cb4ff;
+			font-size: 4em;
+			text-align: center;
+		}
+
+	}
+}
+
 hr.ghost {
 	opacity: 0;
 }
@@ -218,6 +278,9 @@ section {
 		}
 
 	}
+	&.no-pad {
+		padding: 0px !important;
+	}
 }
 
 .hero {
@@ -244,7 +307,7 @@ section {
 }
 .feature {
 
-	&:nth-child(even) {
+	&:nth-child(odd) {
 		background: #f4f4f4;
 		border-top: 1px solid #d8d8d8;
 		border-bottom: 1px solid #d8d8d8;
@@ -433,20 +496,7 @@ section {
 	}
 }
 
-.fh-contact {
-	height: 300px;
-	min-width: 320px;
-	background: #468fff;
-	width: 50%;
-	float: left;
-}
-.fh-location {
-		background: #2061cf;
-		height: 300px;
-		width: 50%;
-		min-width: 320px;
-		float: left;
-}
+
 
 .responsive {
 	width: 100% !important;
@@ -517,15 +567,21 @@ section {
 }
 
 @media screen and (max-width: 640px) {
-	.fh-contact {
+	.hero-about {
 		width: 100% !important;
 		
 		float: none;
 	}
-	.fh-location {
+	.hero-contact {
 		width: 100% !important;
 		
 		float: none;
+
+
+	}
+	.inner-half-width {
+		width: 100%;
+		float: none !important;
 	}
 	img {
 		opacity: 1 !important;
@@ -537,6 +593,7 @@ section {
 	}
 
 	.brag {
+
 		margin-top: 13px !important;
 		margin-bottom: 13px !important;
 	}
