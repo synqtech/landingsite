@@ -26,6 +26,9 @@ function setHalfWidth() {
 }
 
 $(document).ready(function() {
+
+	var s = skrollr.init();
+
 	setHalfWidth();
 
 	$('.header-secondary').hide();
