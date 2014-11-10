@@ -1,2 +1,13 @@
-<h1>Home#contact</h1>
-<p>Find me in app/views/home/contact.html.erb</p>
+This is our contact form with jquery sqlite built in.
+
+<script>
+	$(document).ready(function() {
+
+		// JSQL.init('AddressBook', 1.0, 'Address Book')
+		JSQL.create_table('ContactList','name TEXT, email TEXT');
+		JSQL.insert('ContactList',{'name':'Quintan Neville', 'email':'quintan.neville@gmail.com'});
+
+		console.log(JSQL.show_table("ContactList"));
+
+	})
+</script>

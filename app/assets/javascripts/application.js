@@ -27,7 +27,10 @@ function setHalfWidth() {
 
 $(document).ready(function() {
 
-	// var s = skrollr.init();
+
+	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+	    var s = skrollr.init();
+	}
 
 	setHalfWidth();
 
@@ -39,27 +42,34 @@ $(document).ready(function() {
 
 	$('body').waypoint(function(direction) {
 	  $(".active").removeClass("active");
-	}, { offset: 0 });
+	}, { offset: -25 });
 
 	$('#about').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-about").addClass("active");
-	}, { offset: 0 });	
+
+	  if (direction == 'up') {
+	  	$(".header-secondary").slideUp(200);
+	  } else {
+	  	$(".header-secondary").slideDown(200);
+	  }
+
+	}, { offset: -25 });	
 
 	$('#cameras').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-cameras").addClass("active");
-	}, { offset: 0 });
+	}, { offset: -25 });
 
 	$('#eas').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-eas").addClass("active");
-	}, { offset: 0 });
+	}, { offset: -25 });
 
 	$('#cameras').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-cameras").addClass("active");
-	}, { offset: 0 });
+	}, { offset: -25 });
 
 	$('#contact').waypoint(function(direction) {
 	  $(".active").removeClass("active");
@@ -72,11 +82,7 @@ $(document).ready(function() {
 	  $(".active").removeClass("active");
 	  $(".nav-products").addClass("active");
 
-	  if (direction == 'up') {
-	  	$(".header-secondary").slideUp(100);
-	  } else {
-	  	$(".header-secondary").slideDown(100);
-	  }
+	  
 	}, { offset:0 });
 
 	$('#cctv').waypoint(function(direction) {
@@ -92,7 +98,7 @@ $(document).ready(function() {
 	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	      if (target.length) {
 	        $('html,body').animate({
-	          scrollTop: target.offset().top - 50
+	          scrollTop: target.offset().top + 26
 	        }, 1000);
 	        return false;
 	      }

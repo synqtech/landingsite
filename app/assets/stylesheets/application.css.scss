@@ -49,7 +49,7 @@ nav {
 	
 	width: auto;
 	margin: 0px auto 25px auto;
-	padding: 20px;
+	padding: 0px 25px 25px 25px;
 	color: #fff !important;
 	width: 80%;
 	
@@ -198,6 +198,7 @@ nav {
 
 	.inner-half-width {
 		padding-right: 25px;
+		padding-left: 25px;
 		float: right;
 	}
 
@@ -587,7 +588,7 @@ section {
 	}
 	.hero-contact {
 		width: 100% !important;
-		
+		padding-left: 25px;
 		float: none;
 
 
