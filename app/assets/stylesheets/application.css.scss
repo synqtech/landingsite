@@ -127,13 +127,13 @@ nav {
 
 }
 .header {
-	
+	position: absolute;
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	bottom: 50px;
 	height: 50px;
-
+	z-index: 1000;
 	padding-top: 15px;
 	height: 80px;
 	.brand {
@@ -167,18 +167,18 @@ nav {
 }
 .header-fade {
 	/* Header */
-	background-image: -o-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: -moz-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: -ms-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: linear-gradient(-180.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -o-linear-gradient(-91.5deg, #f3f3f3 83%, #d9d9d9 100%);
+	background-image: -moz-linear-gradient(-91.5deg, #f3f3f3 83%, #d9d9d9 100%);
+	background-image: -ms-linear-gradient(-91.5deg, #f3f3f3 83%, #d9d9d9 100%);
+	background-image: linear-gradient(-180.5deg, #f3f3f3 83%, #d9d9d9 100%);
 	border-bottom: 1px solid #d8d8d8;
 }
 .header-fade-flip { 
 	/* Under Header */
-	background-image: -o-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: -moz-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: -ms-linear-gradient(-91.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
-	background-image: linear-gradient(1.5deg, rgba(25,25,25,0.05) 83%, rgba(0,0,0,0.15) 100%);
+	background-image: -o-linear-gradient(-91.5deg, #f3f3f3 83%, #d9d9d9 100%);
+	background-image: -moz-linear-gradient(-91.5deg, #f3f3f3 83%, #d9d9d9 100%);
+	background-image: -ms-linear-gradient(-91.5deg, #f3f3f3 83%, #d9d9d9 100%);
+	background-image: linear-gradient(1.5deg, #f3f3f3 83%, #d9d9d9 100%);
 	border-top: 1px solid #d8d8d8;
 	border-bottom: 1px solid #d8d8d8;
 }
@@ -522,6 +522,7 @@ section {
 	width: 100%;
 	overflow: hidden;
 	position: absolute;
+	z-index: 10;
 	&.height-400 {
 		height: 400px;
 		
