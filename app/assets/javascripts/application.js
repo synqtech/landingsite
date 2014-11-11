@@ -47,7 +47,7 @@ $(document).ready(function() {
 	$('#about').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-about").addClass("active");
-
+	  $('body').css('background-color','#f3f3f3');
 	  if (direction == 'up') {
 	  	$(".header-secondary").slideUp(200);
 	  } else {
@@ -64,7 +64,9 @@ $(document).ready(function() {
 	$('#eas').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-eas").addClass("active");
+	  $('body').css('background-color','#40a4e8');
 	}, { offset: -25 });
+
 
 	$('#cameras').waypoint(function(direction) {
 	  $(".active").removeClass("active");
@@ -74,6 +76,7 @@ $(document).ready(function() {
 	$('#contact').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-contact").addClass("active");
+	  
 	}, { offset: 500 });
 	
 	
