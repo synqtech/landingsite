@@ -298,7 +298,8 @@ section {
 .hero {
 	background-attachment: fixed;
 	background-position: 0px 100px;
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 150% 150%;
 	height: 600px !important;
 }
 .blue {
