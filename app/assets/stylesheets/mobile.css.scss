@@ -96,9 +96,8 @@ html * {
 }
 
 
-
 .nav-contents {
-	background: rgba(54, 135, 197, 0.89);
+	
 	height: 53px;
 	margin-top: 0px;
 	width: 700px;
@@ -129,9 +128,11 @@ html * {
 }
 .nav-contents-wrap {
 	width: 100%;
+	background: rgba(54, 135, 197, 0.89);
 	overflow-x: scroll;
 
 }
 .nav-contents-wrap::-webkit-scrollbar { 
 	    display: none; 
 	}
+
