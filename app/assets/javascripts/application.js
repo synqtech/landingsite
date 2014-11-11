@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	$('body').waypoint(function(direction) {
 	  $(".active").removeClass("active");
-	}, { offset: -25 });
+	}, { offset: -0 });
 
 	$('#about').waypoint(function(direction) {
 	  $(".active").removeClass("active");
@@ -54,30 +54,30 @@ $(document).ready(function() {
 	  	$(".header-secondary").slideDown(200);
 	  }
 
-	}, { offset: -25 });	
+	}, { offset: -0 });	
 
 	$('#cameras').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-cameras").addClass("active");
-	}, { offset: -25 });
+	}, { offset: -0 });
 
 	$('#eas').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-eas").addClass("active");
 	  $('body').css('background-color','#40a4e8');
-	}, { offset: -25 });
+	}, { offset: -0 });
 
 
 	$('#cameras').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-cameras").addClass("active");
-	}, { offset: -25 });
+	}, { offset: -0 });
 
 	$('#contact').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-contact").addClass("active");
 	  
-	}, { offset: 500 });
+	}, { offset: window.innerHeight-$("#contact").height() });
 	
 	
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
 	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	      if (target.length) {
 	        $('html,body').animate({
-	          scrollTop: target.offset().top + 26
+	          scrollTop: target.offset().top -1
 	        }, 1000);
 	        return false;
 	      }
