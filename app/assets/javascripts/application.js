@@ -64,7 +64,7 @@ $(document).ready(function() {
 	$('#eas').waypoint(function(direction) {
 	  $(".active").removeClass("active");
 	  $(".nav-eas").addClass("active");
-	  $('body').css('background-color','#40a4e8');
+	  $('body').css('background-color','#1f7cc1');
 	}, { offset: -0 });
 
 

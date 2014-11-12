@@ -21,16 +21,21 @@
 	<div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
 		<div class="hero-about">
 			<div class="inner-half-width">
-				<h3 class="light">About Synq</h3>
+				<h3 class="light">About SYNQ</h3>
 				<p class="lead">SYNQ brings you state of the art security technology that is easy to use, with competitive pricing. From retail, to construction, to your own home, we bring peace of mind at unbeatable prices.</p>
 			</div>
 		</div>
 		<div class="hero-contact">
 			<div class="inner-half-width ">
 				<div class="contact-wrap">
-						<h3 class="light center">Contact Us</h3>
-						<a href="tel:7784402005"><h1 class="center">(778) 440-2005</h1></a>
-						<p class="lead center"><a href="mailto:contact@synqtech.com" class=""><i class="fa fa-envelope-o"></i> contact@synqtech.com</a></p>
+						<h3 class="light">Contact Us</h3>
+						<a href="tel:7784402005"><h1 class="phone-number">(778) 440-2005</h1></a>
+						
+						<div class="social">
+							<a href="mailto:contact@synqtech.com" class=""><i class="fa fa-envelope-o"></i></a>
+							<a href="http://twitter.com/synqaccess"><i class="fa fa-twitter"></i></a>
+							<a href="http://facebook.com/synqaccess"><i class="fa fa-facebook"></i></a>
+						</div>
 					</div>
 			</div>
 		</div>
@@ -159,31 +164,29 @@
 		<!-- Camera Models -->
 
 		<div class="row">
-			<div class="col-md-4"  style="border-left: 4px solid red;">
-				<h1 class="red">Security Cameras</h1>
-				<p class="lead">SYNQ is Canada's only supplier of Acumen security cameras and CCTV systems.</p>
-				<%= image_tag 'ai/acumen.png', :class=>"responsive" %>
+			<div class="col-md-4" >
+				<h1 class=""><%= image_tag 'lead/cctv.png', :class=>'heading-img' %>Security Cameras</h1>
+				<p class="lead center-when-small">SYNQ is Canada's only supplier of Acumen security cameras and CCTV systems. They are one of the few companies to offer a 4K solution to CCTV over IP, and are by-far the most affordable option.</p>
+				<%= image_tag 'ai/acumen.png', :class=>"responsive", :style=>"max-width: 150px;"%>
 				<hr>
-				<p>ACUMEN Intercontinental Corp. is a Taiwanese manufacturer and supplier of high-tech surveillance systems: cameras, video recorders, capture cards, and monitors - all under the trademark of Ai. Thanks to the high growth rate, wide range of product assortment and innovative technologies, ACUMEN Int. Corp. is currently one of the world leaders in the security industry, opening offices in Europe, America, Asia and Africa.</p>
- 
-				<p>Acumen Intercontinental Corp. was founded on January 18, 1997. For more than 10 years, the company keeps growing and has won the worldwide recognition. Acumen now sells equipment to more than 150 countries from all over the world. Acumen Intercontinental Corp. owns more than 10,000 square meters factory and office space. The production volume of the company is more than 160,000 systems per year. Representation of Acumen in Russia, which was founded in 2005, has already won recognition and consumer confidence. Thus, in 2008, Acumen was called "Company of the Year" by the prestigious industry award "Recognition". At the moment Acumen has three offices in different cities in Russia: Moscow, Lipetsk and St. Petersburg. Every office has its own warehouse for finished goods. And also service centers provide technical support to customers. The principle of the company is to be closer to customers, including geographically. For this purpose, Acumen organizes training seminars throughout Russia, everyone can become a participant of the seminar.</p>
 
 			</div>
+
 
 
 			<div class="col-md-8">
 				<div class="row">
 					<div class="col-sm-4">
-						<div class="panel-red">
+						<div class="panel panel-thumb">
 							<%= image_tag "ai/4k.png", :class=>"responsive" %>
 							
 							<h3 class="center">4K Ultra HD</h3>
-							<p class=" center">High definition outdoor cameras for IP streaming.</p>
+							<p class=" center">The ultimate in surveillance with up to 33 MP video resulution.</p>
 							<a href="http://www.acumenin.com/products/aip/box/b84n-bahrain" target="_blank" class="btn btn-lg btn-block btn-default">See All Models » </a>
 						</div>
 					</div>				
 					<div class="col-sm-4">
-						<div class="panel-red">
+						<div class="panel panel-thumb">
 							<%= image_tag "ai/aip.png", :class=>"responsive" %>
 							
 							<h3 class="center">IP Cameras</h3>
@@ -193,25 +196,26 @@
 					</div>
 
 					<div class="col-sm-4">
-						<div class="panel-red">
+						<div class="panel panel-thumb">
 							<%= image_tag "ai/analogue.png", :class=>"responsive" %>
 							
 							<h3 class="center">Analogue Cameras</h3>
-							<p class=" center">High definition outdoor cameras for IP streaming.</p>
+							<p class=" center">Analogue CCTV cameras to meet your surveillance needs</p>
 							<a href="http://www.acumenin.com/products/ai" target="_blank" class="btn btn-lg btn-block btn-default">See All Models » </a>
 						</div>
 					</div>
 
 				</div>
 				<!-- Video & Software -->
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="embed-responsive embed-responsive-16by9">
-							<iframe width="100%" class="embed-responsive-item" src="//www.youtube.com/embed/mrwe60NHmWg?list=PLGCgNUc9Xhb2BriSN-6F3jIBWVBQ4L9KT" frameborder="0" allowfullscreen></iframe>
-						</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe width="100%" class="embed-responsive-item" src="//www.youtube.com/embed/mrwe60NHmWg?list=PLGCgNUc9Xhb2BriSN-6F3jIBWVBQ4L9KT" frameborder="0" allowfullscreen></iframe>
 					</div>
-
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -225,9 +229,9 @@
 		
 
 		<div class="row">
-			<div class="col-md-6" style="border-left: 4px solid #00aeee;">
-				<h2>EAS Systems</h2>
-				<p class="lead">State of the Art Article Surveillance Systems</p>
+			<div class="col-md-6">
+				<h1><%= image_tag 'lead/barcode.png', :class=>'heading-img' %>EAS Systems</h1>
+				<p class="lead center-when-small">State of the Art Article Surveillance Systems</p>
 
 				<p>SYNQ is proud to supply the only EAS labels compatible with meat printers. In the event of shoplifting, a push notification will immediately be sent to any party’s phone with access to a video clip 2-seconds prior to the offense.</p>
 
@@ -235,16 +239,7 @@
 				<p>SYNQ’s Electronic Article Surveillance tags are compatible with Digi, Hobart, Bizerba, and Ishida meat label printers. Getting started is as simple as changing label paper.</p>
 
 
-				<div class="row">
-					<div class="col-sm-6">
-						<h3 class="light">Hi-Frequency</h3>
-						<p>SYNQ’s very own hi-frequency tags are low-profile, discreet, and effective. Best of all, they are produced in Canada.</p>
-					</div>
-					<div class="col-sm-6">
-						<h3 class="light">Low-Frequency</h3>
-						<p>SYNQ works closely with Tag-It EAS for low frequency tags.</p>
-					</div>
-				</div>
+				
 			</div>
 			<div class="col-md-6">
 				<%= image_tag "eas/large-graphic.png", :class=>"responsive", :style=>"width: 100%; height: auto; max-width: 400px;" %>
@@ -253,15 +248,17 @@
 		</div>
 		<hr>
 		<div class="row">
-			<div class="col-sm-2"></div>
-			<div class="col-sm-8">
+			<div class="col-md-9">
+			
 				<h2 class="center">How It Works</h2>
-				<p class="lead center">SYNQ's unique approach to EAS works by combining our discreet Hi-Frequency labels with smart camera technology to bring you video of suspicious incidents exactly when you need it.</p>
-
+				<p class="lead center">SYNQ's unique approach to EAS works by combining our discreet Hi-Frequency labels with smart camera technology to bring you video of suspicious incidents exactly when you need it. Our thermal scale labels are uniquely compatible with all meat and deli printers, so no labour is required to get your SYNQ EAS system up and running.</p>
 
 			</div>
-			<div class="col-sm-2"></div>
-			<hr class="ghost">
+			<div class="col-md-3">
+				<%= image_tag 'eas/brands.png', :class=>"responsive" %>
+			</div>
+			
+			<hr class="invisible">
 		</div>
 		<div class="row bordered">
 
@@ -290,34 +287,31 @@
 				<h4 class="light">Review &amp; Apprehend</h4>
 				<p class="light">Review the clear footage of the thief and act accordingly.</p>
 			</div>
-
-
-<!-- 			<div class="col-xs-6 col-md-3 center">
-				<%= image_tag 'eas/2.png', :class=>"responsive" %>
-				<h4 class="light">Theft Occurs</h4>
-				<p class="light">If theft occurs, the gate’s alarm will sound off as usual.</p>
-			</div>
-
-			<div class="col-xs-6 col-sm-6 col-md-3 center">
-				<%= image_tag 'eas/3.png', :class=>"responsive" %>
-				<h4 class="light">Receive Video Notification</h4>
-				<p class="light">Receive video notification starting 2 seconds before thief exits through the gate.</p>
-			</div>
-
-			<div class="col-xs-6 col-sm-6 col-md-3 center">
-				<%= image_tag 'eas/3.png', :class=>"responsive" %>
-				<h4 class="light">Receive Video Notification</h4>
-				<p class="light">Receive video notification starting 2 seconds before thief exits through the gate.</p>
-			</div> -->
-<!-- 
-			<div class="col-xs-6 col-sm-6 col-md-3 center">
-				<%= image_tag 'eas/4.png', :class=>"responsive" %>
-				<h4 class="light">Review &amp; Apprehend</h4>
-				<p class="light">Review the clear footage of the thief and act accordingly.</p>
-			</div>
- -->		</div>
 			
-	</div>
+		</div>
+
+		<div class="row">
+			<h2 class="center">Pick Your Solution</h2>
+			<div class="col-sm-6 center">
+					<div class="box">
+					<h3 class="light ">Large Exit</h3>
+					<p>SYNQ’s very own hi-frequency tags are low-profile, discreet, and effective. Best of all, they are produced in Canada. SYNQ's high-frequency tags are ideal for larger gates and offer superior range to anything else.
+					</p>
+					<%= link_to raw("<i class=\"fa fa-download\"></i> SYNQ EAS.pdf"), "#{root_url}/assets/eas/synq_eas_marketing.pdf", :class=>"btn btn-lg btn-primary btn-block", :target=>"_blank", :style=>"margin: 10px 0px 0px 0px" %>
+					
+				</div>
+			</div>
+			<div class="col-sm-6 center">
+					<div class="box">
+					<h3 class="light">Small Exit</h3>
+					<p>SYNQ works closely with Tag-It EAS for low frequency tags. These are ideal for smaller exit sizes and are also compatible with your existing printers.</p>
+
+					<a href="http://tagit-eas.com" target="_blank" class="btn btn-lg btn-primary btn-block">
+						<%= image_tag 'tagit-white.png' %>
+					</a>
+				</div>
+			</div>
+		</div>
 	<div class="clearfix"></div>
 	
 </section>
@@ -357,23 +351,24 @@
 		<div class="col-sm-6">
 			<h1 class="center">Contact Us</h1>
 			<p class="lead center">Get in touch with SYNQ</p>
-			<hr>
+			
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
-		<div class="row center">
+		<div class="row center social">
 
-			<div class="col-xs-0 col-sm-3"></div>
-			<div class="col-xs-4 col-sm-2"><a href="mailto:nolan@synqtech.com"><i class="fa fa-envelope-o"></i><br>nolan@synqtech.com</a></div>
-			<div class="col-xs-4 col-sm-2"><a href="tel:7784402005"><i class="fa fa-phone"></i><br>(778) 440-2005</a></div>
-			<div class="col-xs-4 col-sm-2"><a href="http://www.twitter.com/synqaccess" target="_blank"><i class="fa fa-twitter"></i><br>@SynqAccess</a></
-			<div class="col-xs-0 col-sm-3"></div>
+			<div class="col-xs-0 col-sm-2"></div>
+			<div class="col-xs-3 col-sm-2"><a href="mailto:contact@synqtech.com"><i class="fa fa-envelope-o"></i><br><span class="hidden-sm hidden-xs">contact@synqtech.com</span></div>
+			<div class="col-xs-3 col-sm-2"><a href="tel:7784402005"><i class="fa fa-phone"></i><br><span class="hidden-sm hidden-xs">778.440.2005</span></a></div>
+			<div class="col-xs-3 col-sm-2"><a href="http://www.twitter.com/synqaccess" target="_blank"><i class="fa fa-twitter"></i><br><span class="hidden-sm hidden-xs">@SynqAccess</span></a></div>
+			<div class="col-xs-3 col-sm-2"><a href="http://www.facebook.com/synqaccess" target="_blank"><i class="fa fa-facebook"></i><br><span class="hidden-sm hidden-xs">@SynqAccess</span></a></div>
+			<div class="col-xs-0 col-sm-2"></div>
 
 		</div>
 		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
-			<hr>
+			<div class="col-sm-2">&nbsp;</div>
+			<div class="col-sm-8">
+			
 				<div class="well center">
 					<strong>SYNQ Technology</strong><br>
 					1075 Pandora Ave.<br>
@@ -384,7 +379,7 @@
 
 				<center><a href="#backtotop" class="btn btn-dark btn-lg">Back To Top <i class="fa fa-hand-o-up"></i></button></a>
 			</div>
-			<div class="col-sm-3"></div>
+			<div class="col-sm-2">&nbsp;</div>
 		</div>
 	</div>
 

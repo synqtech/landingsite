@@ -37,6 +37,8 @@ nav {
 
 }
 
+
+
 .summary-img {
 	width: 60%;
 	max-width: 114px;
@@ -54,10 +56,11 @@ nav {
 	padding: 25px !important;
 	background: #fff !important;
 }
+
 .contact-wrap {
 	
 	width: auto;
-	margin: 0px auto 25px auto;
+	margin: 0px;
 	padding: 0px 25px 25px 25px;
 	color: #fff !important;
 	width: 80%;
@@ -215,13 +218,14 @@ nav {
 .hero-contact {
 	
 	box-sizing: border-box;
-	
 	color:#fff;
-		
 	width: 50%;
 	min-width: 320px;
 	float: left;
-
+	.social {
+		font-size: 25px;
+		margin-right: 10px;
+	}
 	padding: 50px 0px 0px 0;
 	
 	.inner-half-width {
@@ -562,10 +566,23 @@ section {
 	max-width: 571px;
 	
 }
+
+div[class^="col"]>.box{
+	background: lighten(#2287d3, 45%);
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 10px;
+}
 .footer {
 	color: white !important;
-	background: #40a4e8;
+	background: #1f7cc1;
 	max-width: 100%;
+	border-top: 25px solid #2287d3 !important;
+
+	.social {
+		padding: 25px 0px;
+	}
+
 	h1 {
 		color: #fff !important;
 	}
@@ -574,11 +591,11 @@ section {
 	}
 	i {
 		font-size: 32px;
-		color: #fff;
-		text-shadow: 0px 1px 10px rgba(0,0,0,.15);
+		color: #28a2ff;
+		
 	}
 	a {
-		color: #bce6ff;
+		color: #cee7f6;
 	}
 
 	.well {
@@ -608,10 +625,33 @@ section {
 			top: 550px;
 		}
 
+		.hero-contact {
+			.contact-wrap {
+				margin: 0px !important;
+				padding: 0px !important;
+				text-align: center;
 
+			}
+			.social {
+				font-size: 40px;
+			}
+			padding-bottom: 50px;
+		}
+
+	.brag {
+
+		margin-top: 13px !important;
+		margin-bottom: 13px !important;
+		padding-top: 13px !important;
+		padding-bottom: 13px !important;
+	}
 
 }
 @media screen and (max-width: 640px) {
+
+	h1, .center-when-small {
+		text-align: center !important;
+	}
 	.hero-about {
 		width: 100% !important;
 		
@@ -632,15 +672,9 @@ section {
 		opacity: 1 !important;
 	}
 
-	.row.bordered{
+	.bordered{
 		border: 0px solid #269bdc;
 		border-radius: 5px;
-	}
-
-	.brag {
-
-		margin-top: 13px !important;
-		margin-bottom: 13px !important;
 	}
 
 	.panel-thumb {
@@ -688,7 +722,7 @@ section {
 		}
 		.contact-wrap {
 			width: 100%;
-			margin: 0px;
+			margin: 0px !important;
 		}
 	}
 
@@ -698,5 +732,13 @@ section {
 
 
 .padded {
+
+}
+.heading-img {
+	display:inline !important;
+	height: 32px;
+	width: 32px;
+	vertical-align: -4px;	
+	margin-right: 10px;
 
 }
