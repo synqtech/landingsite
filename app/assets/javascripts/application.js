@@ -28,7 +28,7 @@ function setHalfWidth() {
 $(document).ready(function() {
 
 
-	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/) && window.innerWidth > 768) {
 	    var s = skrollr.init();
 	}
 

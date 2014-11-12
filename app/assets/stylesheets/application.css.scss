@@ -301,7 +301,7 @@ section {
 	background-position: 0px 100px;
 	background-repeat: no-repeat;
 	background-size: 150% 150%;
-	height: 600px !important;
+	height: 600px;
 }
 .blue {
 	background: #2287d3;
@@ -599,7 +599,18 @@ section {
 		}
 	}
 }
+@media screen and (max-width: 768px) {
+	
+		.center-img {
+			margin: 150px auto !important;
+		}
+		.desc-imgs {
+			top: 550px;
+		}
 
+
+
+}
 @media screen and (max-width: 640px) {
 	.hero-about {
 		width: 100% !important;
@@ -642,19 +653,49 @@ section {
 		margin: 0px;
 
 	}
+
+	.hero {
+		margin-top: 0px;
+		background-size:  600px;
+		background-position: 0px 0px;
+		height: 300px;
+
+		.center-img {
+			width: 300px;
+		}
+
+		.absolute-div-wrap {
+			top: -80px !important;
+		}
+		.desc-imgs {
+			top: 200px !important;
+		}
+	}
+
+	.hero-about {
+		text-align: center !important;
+	}
+	.hero-contact {
+		padding-left: 0px;
+		margin-left: 0px;
+		float: left;
+		width: 100%;
+		h3 {
+			margin-top: 0px;
+		}
+		.inner-half-width {
+			padding-left: 0px;
+		}
+		.contact-wrap {
+			width: 100%;
+			margin: 0px;
+		}
+	}
+
 	div[class^="col"]{padding-left:10px; padding-right:10px;}
 }
 
-@media screen and (max-width: 768px) {
-	
-		.center-img {
-			margin: 150px auto !important;
-		}
-		.desc-imgs {
-			top: 550px;
-		}
 
-}
 
 .padded {
 
