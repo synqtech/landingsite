@@ -6,8 +6,8 @@ This is our contact form with jquery sqlite built in.
 		// JSQL.init('AddressBook', 1.0, 'Address Book')
 		JSQL.create_table('ContactList','name TEXT, email TEXT');
 		JSQL.insert('ContactList',{'name':'Quintan Neville', 'email':'quintan.neville@gmail.com'});
+		results = JSQL.show_table("ContactList")
 
-		console.log(JSQL.show_table("ContactList"));
-
+		console.log(results)
 	})
 </script>

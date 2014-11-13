@@ -62,15 +62,51 @@ var JSQL = (function () {
 
 		var insertStatement = "INSERT INTO "+table+" ("+fl_s+") VALUES ("+qm+")";
 		var values = [];
+
 		for (var i = 0; i<fields.length; i++) {
-			values.push(fields_json(fields[i]));
-			alert("pushed field: "+fields_json(fields[i]));
+			// console.log(fields[i])
+			// console.log(fields_json[fields[i]])
+			values.push(fields_json[fields[i]]);
+			
 		}
 		
 
 		db.transaction(function (tx) { tx.executeSql(insertStatement, values, loadAndReset, onError); });
 	}
 
+	function loadAndReset() //Function for Load and Reset...
+ 
+	{
+	 
+	    showRecords()
+	 
+	}
+
+
+	var showRecords = function () {
+		db.transaction(function (tx) {
+ 
+	        tx.executeSql(selectAllStatement, [], function (tx, result) {
+	 
+	            dataset = result.rows;
+	 
+	            for (var i = 0, item = null; i < dataset.length; i++) {
+	 
+	                dataset;
+	                console.log(dataSet);
+	 
+	            }
+	 
+	        });
+ 
+   		});
+	}
+
+	function onError(tx, error){
+ 
+	    alert(error.message);
+ 
+	}
 	// var insert = function(fields) {
 		
 	// 	var base="INSERT INTO Contacts (itemname, item_id) VALUES (?, ?, ?)"
@@ -111,10 +147,10 @@ var JSQL = (function () {
 	            dataset = result.rows;
 	 
 	            for (var i = 0, item = null; i < dataset.length; i++) {
-	 
+	 				// console.log(">>>")
 	                item = dataset.item(i);
+	                // console.log(item)
 	 				results.push(item);
-	 
 	            }
 	 
 	        });
@@ -125,13 +161,10 @@ var JSQL = (function () {
 	 
 	}
 
-
-
 	return {
 		init: init,
 		create_table: create_table,
 		insert: insert,
 		show_table: show_table
-
 	}
 }());
