@@ -1,3 +1,11 @@
+<!--[if IE]>
+<style type="text/css">
+  .header-secondary {
+	background: #269bdc;
+  }
+</style>
+<![endif]-->
+
 <%= render :partial => 'layouts/navs' %>
 <a id="backtotop"></a>
 <div id="skrollr-body"></div>
@@ -294,12 +302,12 @@
 			<h2 class="center">Pick Your Solution</h2>
 			<div class="col-sm-6 center">
 					<div class="box">
-					<h3 class="light ">Large Exit</h3>
-					<p>SYNQ’s very own hi-frequency tags are low-profile, discreet, and effective. Best of all, they are produced in Canada. SYNQ's high-frequency tags are ideal for larger gates and offer superior range to anything else.
-					</p>
-					<%= link_to raw("<i class=\"fa fa-download\"></i> SYNQ EAS.pdf"), "#{root_url}/assets/eas/synq_eas_marketing.pdf", :class=>"btn btn-lg btn-primary btn-block", :target=>"_blank", :style=>"margin: 10px 0px 0px 0px" %>
-					
-				</div>
+						<h3 class="light ">Large Exit</h3>
+						<p>SYNQ’s very own hi-frequency tags are low-profile, discreet, and effective. Best of all, they are produced in Canada. SYNQ's high-frequency tags are ideal for larger gates and offer superior range to anything else.
+						</p>
+						<%= link_to raw("<i class=\"fa fa-download\"></i> SYNQ EAS.pdf"), "http://corporatedraft.com/synq/pdf/SYNQ-EAS.pdf", :class=>"btn btn-lg btn-primary btn-block", :target=>"_blank", :style=>"margin: 10px 0px 0px 0px" %>
+						
+					</div>
 			</div>
 			<div class="col-sm-6 center">
 					<div class="box">
@@ -358,7 +366,7 @@
 		<div class="row center social">
 
 			<div class="col-xs-0 col-sm-2"></div>
-			<div class="col-xs-3 col-sm-2"><a href="mailto:contact@synqtech.com"><i class="fa fa-envelope-o"></i><br><span class="hidden-sm hidden-xs">contact@synqtech.com</span></div>
+			<div class="col-xs-3 col-sm-2"><a href="mailto:contact@synqtech.com"><i class="fa fa-envelope-o"></i><br><span class="hidden-sm hidden-xs">contact@synqtech.com</span></a></div>
 			<div class="col-xs-3 col-sm-2"><a href="tel:7784402005"><i class="fa fa-phone"></i><br><span class="hidden-sm hidden-xs">778.440.2005</span></a></div>
 			<div class="col-xs-3 col-sm-2"><a href="http://www.twitter.com/synqaccess" target="_blank"><i class="fa fa-twitter"></i><br><span class="hidden-sm hidden-xs">@SynqAccess</span></a></div>
 			<div class="col-xs-3 col-sm-2"><a href="http://www.facebook.com/synqaccess" target="_blank"><i class="fa fa-facebook"></i><br><span class="hidden-sm hidden-xs">@SynqAccess</span></a></div>
@@ -382,7 +390,7 @@
 			<div class="col-sm-2">&nbsp;</div>
 		</div>
 	</div>
-	<a href="https://plus.google.com/114609175069400160688" rel="publisher">Google+</a>
+	
 </section>
 
 <%= render :partial => 'app/qwatch' %>
