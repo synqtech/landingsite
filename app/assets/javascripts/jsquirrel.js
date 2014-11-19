@@ -56,22 +56,7 @@ var JSQL = (function () {
 
 	var insert = function(table, fields_json) {
 
-		var fields = Object.keys(fields_json)
-		var fl_s  = fields.join(",");
-		var qm = new Array(fields.length+1).join('?').split('').join(",");
-
-		var insertStatement = "INSERT INTO "+table+" ("+fl_s+") VALUES ("+qm+")";
-		var values = [];
-
-		for (var i = 0; i<fields.length; i++) {
-			// console.log(fields[i])
-			// console.log(fields_json[fields[i]])
-			values.push(fields_json[fields[i]]);
-			
-		}
 		
-
-		db.transaction(function (tx) { tx.executeSql(insertStatement, values, loadAndReset, onError); });
 	}
 
 	function loadAndReset() //Function for Load and Reset...

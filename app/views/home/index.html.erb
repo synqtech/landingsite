@@ -16,12 +16,12 @@
 <%= render :partial => 'layouts/navs' %>
 <a id="backtotop"></a>
 <div id="skrollr-body"></div>
-<section id="logo-name" class="hero" style="background-image: url(<%= image_url 'lead/hero-bg.jpg' %>)" data-0="background-position: 0px -500px;" data-700="background-position: 0px -600px;">
+<div id="logo-name" class="hero">
 	<div class="absolute-div-wrap" data-0="opacity:1; top: -50px;" data-500="opacity:0; top: 200px;">
 		<%= image_tag 'logo-large.svg', :class=>"center-img" %>	
 	</div>
 	
-	<div class="desc-imgs" style="text-align: center !important;" data-0="top: 450px;" data-500="top: 550px;">
+	<div class="desc-imgs" style="text-align: center !important;" data-0="-ms-transform: translate(0,0px);-moz-transform: translate(0,0px);-webkit-transform: translate(0,0px);transform: translate(0,0px);" data-500="-ms-transform: translate(0,100px);-moz-transform: translate(0,100px);-webkit-transform: translate(0,100px);transform: translate(0,100px);">
 		<center>
 			<%= image_tag 'lead/security.png' %>
 			<%= image_tag 'lead/cctv.png' %>
@@ -29,8 +29,9 @@
 			<%= image_tag 'lead/barcode.png' %>
 		</center>
 	</div>
-</section>
-
+</div>
+<div id="backdrop" data-0="-ms-transform: translate(0,0px);-moz-transform: translate(0,0px);-webkit-transform: translate(0,0px);transform: translate(0,0px);" data-500="-ms-transform: translate(0,-100px);-moz-transform: translate(0,-100px);-webkit-transform: translate(0,-100px);transform: translate(0,-100px);" style="background-image: url(<%= image_url 'lead/hero-bg.jpg' %>)">
+</div>
 <div class="clearfix"></div>
 <section id="about" class="header-fade-blue-flip" style="padding-top: 50px;">
 	<div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
