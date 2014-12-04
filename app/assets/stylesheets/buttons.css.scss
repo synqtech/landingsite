@@ -1,0 +1,18 @@
+.btn {
+
+
+	&.btn-cta {
+		border: 2px solid #fff;
+		border-radius: 5px;
+		color: #fff;
+		font-size: 25px;
+		padding: 25px;
+		background: none !important;
+
+		&:hover {
+			background: #fff !important;
+			color: #2287d3;
+		}
+	}
+
+}

@@ -13,7 +13,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 function setHalfWidth() {
@@ -41,7 +40,7 @@ $(document).ready(function() {
 	});
 
 	$('body').waypoint(function(direction) {
-	  $(".active").removeClass("active");
+	  // $(".active").removeClass("active");
 	}, { offset: -0 });
 
 	$('#about').waypoint(function(direction) {

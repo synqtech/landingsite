@@ -1,6 +1,11 @@
 class HomeController < ApplicationController
-  def product
+  def distributors
+  	
   end
+
+  def distributor_signup
+  	logger.debug params.inspect
+  end	
 
   def about
   end

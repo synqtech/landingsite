@@ -1,3 +1,93 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary: #2287d3;
+$soft_primary: lighten($primary, 40%);
+#distributors {
+	header {
+		
+		height: 200px;
+		position:relative;
+		color: $soft_primary !important;
+		text-align: center;
+		overflow: hidden;
+		
+		#map-cover {
+			width: 100%;
+			z-index: 1;
+			padding: 35px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(31, 124, 193, 0.8);
+		}
+		#background {
+			background-image: image_url("distrib/cargotruck.jpg");
+			background-size: cover;
+			height: 350px;
+			width: 100%;
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+		}
+		border-bottom: 20px solid #2287d3;
+
+		h1 {
+			color: #fff;
+		}
+
+		.header-subnav {
+			text-align: center;
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+			width: 100%;
+
+			li {
+				margin-top: 25px;
+				display: inline-block;
+				a {
+					color: $soft_primary;
+					text-decoration: none;
+					border-radius: 20px;
+					padding: 3px 10px;
+					&:hover {
+						color: $primary;
+						background: #fff;
+						
+					}
+				}
+				a.active {
+					color: $primary;
+					background: $soft_primary;
+					&:hover {
+
+						color: $primary;
+						background: #fff;
+					}
+				}
+			}			
+		}
+		
+	}
+
+	.panel.padded {
+		padding: 20px;
+	}
+
+	p.light {
+		font-weight: 400 !important;
+		color: #6a6a6a !important;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	header h1 {
+		margin-top: -20px;
+	}
+}

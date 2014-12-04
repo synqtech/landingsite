@@ -1,0 +1,248 @@
+<% content_for :title => 'Become A Distributor' %>
+<div id="distributors">
+	<header>
+		<div id="map-canvas"></div>
+		<div id="map-cover">
+			<h1 class="center">Become a SYNQ Distributor</h1>
+
+			<ul class="header-subnav">
+				<li><a class="active" href="#SignUp">Sign Up</a></li>
+				<li><a href="#ProductInfo">Product Info</a></li>
+				<li><a href="#FAQ">FAQ</a></li>
+			</ul>
+		</div>
+		<div class="back-wrap whoosh-left">
+			<%= link_to raw("<i class=\"fa fa-arrow-left\"></i> Back"), root_url, :class=>"btn btn-round btn-default" %>
+		</div>
+		
+	</header>
+	<div class="container" style="margin-top: 50px;">
+		<div class="row">
+			<div class="col-md-6" id="SignUp">
+					
+				<div class="panel padded">
+					
+							<h1 class="center">Sign Up</h1>
+							<p class="lead light">Fill out the form below and we will contact you within 2 business days.</p>
+							<%= form_tag do %>
+
+								<%= label_tag :name %><br/>
+								<%= text_field :name,"", :class=>"form-control" %><br/>
+								<%= label_tag :email %><br/>
+								<%= text_field :email,"", :class=>"form-control" %><br/>
+								<%= label_tag :company, "Company Name" %><br/>
+								<%= text_field :company,"", :class=>"form-control" %><br/>
+								<%= label_tag :address, "Company Address" %><br/>
+								<%= text_field :address,"", :class=>"form-control" %><br/>
+
+								<div class="row">
+									<div class="col-xs-8">
+										<%= label_tag :city %><br/>
+										<%= text_field :city,"", :class=>"form-control" %><br/>
+										
+									</div>
+									<div class="col-xs-4">
+										<%= label_tag :province, "Province/State" %><br/>
+										<%= text_field :province,"", :class=>"form-control" %><br/>
+									</div>
+								</div>
+
+								
+								<%= label_tag :country %><br/>
+								<%= text_field :country,"", :class=>"form-control" %><br/>
+							<% end %>	
+					
+				</div>
+
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingOne">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					          How does SYNQ Cover Warranty?
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					      <div class="panel-body">
+					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingTwo">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					          If I am looking for dimensions, specifications or need technical product information, who I should contact?
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      <div class="panel-body">
+					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingThree">
+					      <h4 class="panel-title">
+					        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					          If I am looking for dimensions, specifications or need technical product information, who I should contact?
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					      <div class="panel-body">
+					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+
+
+				</div>
+
+				
+
+			<div class="col-md-6" id="ProductInfo">
+					<h1 class="center">Product Info</h1>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="panel panel-thumb">
+							<div class="panel-header" style="background: url(<%= image_url 'blur/wide.jpg' %>)">
+								<%= image_tag "qcctv.png", :class=>"responsive" %>
+							</div>
+
+							
+							<div class="panel-body">
+								<h3>CCTV Storage</h3>
+								<p>Subscriptions &amp; servers to record up to <strong>1 year</strong> at full resolution.</p>
+							</div>
+							<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Learn More » </a>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-thumb">
+							<div class="panel-header" style="background: url(<%= image_url 'blur/wide.jpg' %>)">
+								<%= image_tag "qcctv.png", :class=>"responsive" %>
+							</div>
+
+							
+							<div class="panel-body">
+								<h3>CCTV Storage</h3>
+								<p>Subscriptions &amp; servers to record up to <strong>1 year</strong> at full resolution.</p>
+							</div>
+							<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Learn More » </a>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-thumb">
+							<div class="panel-header" style="background: url(<%= image_url 'blur/wide.jpg' %>)">
+								<%= image_tag "qcctv.png", :class=>"responsive" %>
+							</div>
+
+							
+							<div class="panel-body">
+								<h3>CCTV Storage</h3>
+								<p>Subscriptions &amp; servers to record up to <strong>1 year</strong> at full resolution.</p>
+							</div>
+							<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Learn More » </a>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-thumb">
+							<div class="panel-header" style="background: url(<%= image_url 'blur/wide.jpg' %>)">
+								<%= image_tag "qcctv.png", :class=>"responsive" %>
+							</div>
+
+							
+							<div class="panel-body">
+								<h3>CCTV Storage</h3>
+								<p>Subscriptions &amp; servers to record up to <strong>1 year</strong> at full resolution.</p>
+							</div>
+							<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Learn More » </a>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-thumb">
+							<div class="panel-header" style="background: url(<%= image_url 'blur/wide.jpg' %>)">
+								<%= image_tag "qcctv.png", :class=>"responsive" %>
+							</div>
+
+							
+							<div class="panel-body">
+								<h3>CCTV Storage</h3>
+								<p>Subscriptions &amp; servers to record up to <strong>1 year</strong> at full resolution.</p>
+							</div>
+							<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Learn More » </a>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-thumb">
+							<div class="panel-header" style="background: url(<%= image_url 'blur/wide.jpg' %>)">
+								<%= image_tag "qcctv.png", :class=>"responsive" %>
+							</div>
+
+							
+							<div class="panel-body">
+								<h3>CCTV Storage</h3>
+								<p>Subscriptions &amp; servers to record up to <strong>1 year</strong> at full resolution.</p>
+							</div>
+							<a data-toggle="modal" data-target="#CCTVModal" class="btn btn-lg btn-block btn-default">Learn More » </a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+</div>
+
+
+
+<%= render :partial => "layouts/footer_no_cta" %>
+
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js">
+</script>
+
+<script type="text/javascript">
+	var readyaction = function() {
+
+		initialize();
+
+		var map;
+		function initialize() {
+		  var mapOptions = {
+		    center: { lat: 48.426831, lng: -123.353813},
+		    zoom: 5
+		  };
+		  map = new google.maps.Map(document.getElementById('map-canvas'),
+		      mapOptions);
+		  
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+		
+
+		function moveToLocation(lat, lng){
+			console.log("LAT:"+lat+", LNG"+lng);
+			alert('hi');
+			
+		}
+	}
+	$(document).ready(readyaction);
+	$(document.body).on('ready', readyaction);
+
+
+</script>

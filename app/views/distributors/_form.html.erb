@@ -1,0 +1,66 @@
+<%= form_for(@distributor) do |f| %>
+  <% if @distributor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@distributor.errors.count, "error") %> prohibited this distributor from being saved:</h2>
+
+      <ul>
+      <% @distributor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :company, "Company Name" %><br>
+    <%= f.text_field :company, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, "Your Email" %><br>
+    <%= f.text_field :email, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :name, "Your Name" %><br>
+    <%= f.text_field :name, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone, "Daytime Phone Number" %><br>
+    <%= f.text_field :phone, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address_1 %><br>
+    <%= f.text_field :address_1, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address_2 %><br>
+    <%= f.text_field :address_2, :class=>"form-control" %>
+  </div>
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="form-group">
+        <%= f.label :province, "Province/State" %><br>
+        <%= f.text_field :province, :class=>"form-control" %>
+      </div>      
+    </div>
+    <div class="col-xs-4">
+      <div class="form-group">
+        <%= f.label :zip, "Postal Code/Zip" %><br>
+        <%= f.text_field :zip, :class=>"form-control" %>
+      </div>  
+    </div>
+
+  </div>
+    
+  
+
+  <div class="form-group">
+    <%= f.label :country %><br>
+    <%= f.text_field :country, :class=>"form-control" %>
+  </div>
+
+  <div class="actions clearfix">
+    <%= f.submit "Sign Up", :class=>"btn btn-primary btn-lg pull-right" %>
+
+  </div>
+
+<% end %>
