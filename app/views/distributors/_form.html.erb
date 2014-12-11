@@ -1,7 +1,8 @@
 <%= form_for(@distributor) do |f| %>
+
   <% if @distributor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@distributor.errors.count, "error") %> prohibited this distributor from being saved:</h2>
+    <div class="alert alert-danger" role="alert">
+      <h4 style="color: #3a3a3a"><%= pluralize(@distributor.errors.count, "required field") %> are incorrect or blank:</h4>
 
       <ul>
       <% @distributor.errors.full_messages.each do |msg| %>
@@ -17,7 +18,7 @@
   </div>
   <div class="form-group">
     <%= f.label :email, "Your Email" %><br>
-    <%= f.text_field :email, :class=>"form-control" %>
+    <%= f.text_field :email, :class=>"form-control", :placeholder=>"myname@mysite.com" %>
   </div>
   <div class="form-group">
     <%= f.label :name, "Your Name" %><br>
@@ -28,11 +29,11 @@
     <%= f.text_field :phone, :class=>"form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :address_1 %><br>
+    <%= f.label :address_1, "Address Line 1" %><br>
     <%= f.text_field :address_1, :class=>"form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :address_2 %><br>
+    <%= f.label :address_2, "Address Line 2" %><br>
     <%= f.text_field :address_2, :class=>"form-control" %>
   </div>
   <div class="row">
