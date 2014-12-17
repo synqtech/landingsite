@@ -36,7 +36,9 @@ h1, h2, h3, h4 {
 nav {
 
 }
-
+.field_with_errors input {
+	border: 1px solid $brand-danger;
+}
 #backdrop {
 	height: 800px;
 	width: 100%;
