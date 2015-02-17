@@ -1,6 +1,6 @@
 class RoiSurvey < ActiveRecord::Base
 
-	validates_presence_of :store_sq_ft, :haba, :cctv, :walking_svc, :existing_eas, :eas_effective, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :num_pos_terminals, :num_exits, :exit_width_ft
+	validates_presence_of :store_sq_ft, :haba, :cctv, :walking_svc, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :num_pos_terminals, :num_exits, :exit_width_ft
 
 	def self.square_footages
 		square_footages = {
