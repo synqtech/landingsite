@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store_sq_ft: 1
+  haba: false
+  cctv: false
+  walking_svc: MyString
+  existing_eas: false
+  eas_effective: false
+  eas_tags_per_month: 1
+  total_annual_sales: 1
+  meat_sales_percent: 1
+  num_pos_terminals: 1
+  num_exits: 1
+  num_exits_6_feet: 1
+
+two:
+  store_sq_ft: 1
+  haba: false
+  cctv: false
+  walking_svc: MyString
+  existing_eas: false
+  eas_effective: false
+  eas_tags_per_month: 1
+  total_annual_sales: 1
+  meat_sales_percent: 1
+  num_pos_terminals: 1
+  num_exits: 1
+  num_exits_6_feet: 1

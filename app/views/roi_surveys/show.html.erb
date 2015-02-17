@@ -1,0 +1,137 @@
+<% content_for :title => 'Calculate Return of Investment' %>
+<div id="distributors">
+  <header>
+    <div id="background" style="background-image: url(<%= image_url 'store.jpg' %>)"
+      data-0="-ms-transform: translate(0,-100px);-moz-transform: translate(0,-100px);-webkit-transform: translate(0,-100px);transform: translate(0,-100px);" data-200="-ms-transform: translate(0,-50px);-moz-transform: translate(0,-50px);-webkit-transform: translate(0,-50px);transform: translate(0,-50px);"
+
+    ></div>
+    <div id="map-cover">
+      <h1 class="center">Your Calculation</h1>
+    </div>
+    <div class="back-wrap whoosh-left">
+      <%= link_to raw("<i class=\"fa fa-arrow-left\"></i>"), root_url, :class=>"btn btn-round btn-default" %>
+    </div>
+    
+  </header>
+</div>
+
+<div class="container">
+  <div class="panel pad-25">
+    <!-- <p id="notice"><%= notice %></p> -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">Set Up Cost Comparison</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>---</th>
+              <th>Gates Cost</th>
+              <th>Deactivators</th>
+              <th>+Installation</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <tr>
+            <th>Competitor Actual</th>
+            <td><%= "$#{ comp_gates = @roi_survey._num_gates_needed * 3899 }.00" %></td>
+            <td><%= "$#{ comp_deactivators = @roi_survey.num_pos_terminals * 185 }.00" %></td>
+            <td><%= "$#{ comp_install = (@roi_survey.num_pos_terminals * 85 ) + (@roi_survey.num_exits * 1995 )}.00" %></td>
+            <td><%=  "$#{ comp_gates + comp_deactivators + comp_install}.00" %></td>
+          </tr>
+          <tr>
+            <th>SYNQ Actual</th>
+            <td><%= "$#{ sq_gates = @roi_survey._num_gates_needed * 3899}.00" %></td>
+            <td><%= "$#{ sq_deactivators = @roi_survey.num_pos_terminals * 185}.00" %></td>
+            <td><%= "$#{ sq_install = (@roi_survey.num_pos_terminals * 85) + (@roi_survey._num_gates_needed * 1995)}.00" %></td>
+            <td><%=  "$#{ sq_actual = (sq_gates + sq_deactivators + sq_install)}.00" %></td>
+          </tr>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">Running Cost Comparison</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>---</th>
+              <th>Label Costs</th>
+              <th>Total Labour Costs Per Month</th>
+              <th>Monthly Total</th>
+              <th>Annual Total</th>
+            </tr>
+          </thead>
+
+          <tr>
+            <th>Competitor Costs/Month </th>
+            <td><%= number_to_currency(comp_labels = (@roi_survey.eas_tags_per_month * 0.03)) %></td>
+            <td><%= number_to_currency(comp_labour = (@roi_survey.eas_tags_per_month * 0.02 * 25)) %></td>
+            <td><%= number_to_currency(comp_monthly_total = (comp_labels + comp_labour)) %></td>
+            <td><%= number_to_currency((comp_labels + comp_labour)*12) %></td>
+
+          </tr>
+          <tr>
+            <th>SYNQ Costs</th>
+            <td><%= number_to_currency(sq_labels = @roi_survey.eas_tags_per_month * 0.05) %></td>
+            <td><%= "$0.00" %></td>
+            <td><%= number_to_currency(sq_monthly_total = sq_labels) %></td>
+            <td><%= number_to_currency(sq_labels*12) %></td>
+
+          </tr>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">Savings Comparison</div>
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <td></td>
+            <th class="text-center">Shrink Reduction Per Week</th>
+            <th class="text-center">Weekly EAS Cost</th>
+            <th class="text-center">Total Savings (cost)</th>
+          </tr>
+        </thead>
+        <tr>
+          <th class="text-right">Competitor EAS</th>
+          <td><%= number_to_currency( comp_sr = (0.65 * 0.2 * (@roi_survey.total_weekly_sales * 0.0122) * 0.424 * 0.5 )) %></td>
+          <td><%= number_to_currency( comp_monthly_total ) %></td>
+          <td><%= number_to_currency( comp_sr - comp_monthly_total ) %></td>
+        </tr>
+        <tr>
+          <th class="text-right">SYNQ EAS</th>
+          <td><%= number_to_currency(sq_sr = (0.9 * 0.38 * 0.424 * (@roi_survey.total_weekly_sales * 0.0122))) %></td>
+          <td><%= number_to_currency( sq_monthly_total ) %></td>
+          <td><%= number_to_currency( sq_total_savings = (sq_sr - sq_monthly_total) ) %></td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">SYNQ Breakeven</div>
+      <table class="table text-center">
+        
+        <tr>
+          <th class="text-right">SYNQ One Year Net Benefit</th>
+          <td><%= number_to_currency( (sq_total_savings * 52) - sq_actual ) %></td>
+        </tr>
+        <tr>
+          <th class="text-right">SYNQ Two Year Net Benefit</th>
+          <td><%= number_to_currency( (sq_total_savings * 104) - sq_actual ) %></td>
+        </tr>
+        <tr>
+          <th class="text-right">SYNQ Two Three Net Benefit</th>
+          <td><%= number_to_currency(sq_total_benefit = ( (sq_total_savings * 156) - sq_actual )) %></td>
+        </tr>
+      </table>
+
+      <div class="text-center">
+        Total benefits break even after only <strong><%= (sq_actual/sq_total_benefit)*12/52 %> Months</strong>
+      </div>
+
+    </div>
+    <%= link_to 'Calculate Again', new_roi_survey_path, :class=>"btn btn-primary pull-right btn-lg" %>
+    <div class="clearfix"></div>
+  </div>
+</div>

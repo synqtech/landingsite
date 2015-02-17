@@ -1,9 +1,13 @@
 WCSTest::Application.routes.draw do
+  resources :roi_surveys
   get '/distributors', :to=>'distributors#new'
   resources :distributors
 
   root to: 'home#index'
   
+
+  get 'calculators/roi', :to=>"roi_surveys#new"
+
   get "home/index"
   get "home/product"
   get "home/about"

@@ -1,0 +1,49 @@
+<h1>Listing roi_surveys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Store sq ft</th>
+      <th>Haba</th>
+      <th>Cctv</th>
+      <th>Walking svc</th>
+      <th>Existing eas</th>
+      <th>Eas effective</th>
+      <th>Eas tags per month</th>
+      <th>Total annual sales</th>
+      <th>Meat sales percent</th>
+      <th>Num pos terminals</th>
+      <th>Num exits</th>
+      <th>Num exits 6 feet</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roi_surveys.each do |roi_survey| %>
+      <tr>
+        <td><%= roi_survey.store_sq_ft %></td>
+        <td><%= roi_survey.haba %></td>
+        <td><%= roi_survey.cctv %></td>
+        <td><%= roi_survey.walking_svc %></td>
+        <td><%= roi_survey.existing_eas %></td>
+        <td><%= roi_survey.eas_effective %></td>
+        <td><%= roi_survey.eas_tags_per_month %></td>
+        <td><%= roi_survey.total_annual_sales %></td>
+        <td><%= roi_survey.meat_sales_percent %></td>
+        <td><%= roi_survey.num_pos_terminals %></td>
+        <td><%= roi_survey.num_exits %></td>
+        <td><%= roi_survey.num_exits_6_feet %></td>
+        <td><%= link_to 'Show', roi_survey %></td>
+        <td><%= link_to 'Edit', edit_roi_survey_path(roi_survey) %></td>
+        <td><%= link_to 'Destroy', roi_survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roi survey', new_roi_survey_path %>

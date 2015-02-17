@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204190546) do
+ActiveRecord::Schema.define(version: 20150217005819) do
 
   create_table "distributors", force: true do |t|
     t.string   "email"
@@ -25,6 +25,25 @@ ActiveRecord::Schema.define(version: 20141204190546) do
     t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "roi_surveys", force: true do |t|
+    t.integer  "store_sq_ft"
+    t.boolean  "haba"
+    t.boolean  "cctv"
+    t.string   "walking_svc"
+    t.boolean  "existing_eas"
+    t.boolean  "eas_effective"
+    t.integer  "eas_tags_per_month"
+    t.integer  "total_weekly_sales"
+    t.integer  "meat_sales_percent"
+    t.integer  "num_pos_terminals"
+    t.integer  "num_exits"
+    t.integer  "num_exits_6_feet"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "ey"
+    t.integer  "exit_width_ft"
   end
 
 end
