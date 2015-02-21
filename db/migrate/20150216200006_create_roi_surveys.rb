@@ -3,7 +3,7 @@ class CreateRoiSurveys < ActiveRecord::Migration
     create_table :roi_surveys do |t|
       t.integer :store_sq_ft
       t.boolean :haba
-      t.boolean :cctv
+      t.integer :cctv
       t.string :walking_svc
       t.boolean :existing_eas
       t.boolean :eas_effective
