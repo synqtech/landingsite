@@ -1,0 +1,30 @@
+==================================================
+      **Someone Just Completed A Survey**
+==================================================
+Store Sq. Footage:
+	 <%= "#{@roi_survey.store_sq_ft} Square Ft." %>
+HABA Sales %:
+	 <%= "#{@roi_survey.haba}%" %>
+CCTV Effectiveness (/10):
+	 <%= "#{@roi_survey.cctv}/10" %>
+Walking Service:
+	 <%= @roi_survey.walking_svc %>, <%= @roi_survey.lpo_hours %>
+Existing EAS System:
+	 <%= @roi_survey.existing_eas ? 'Yes' : 'No' %>
+EAS System Effectiveness:
+	 <%= "#{@roi_survey.eas_effective}%" %>
+EAS Tags/month:
+	 <%= "@roi_survey.eas_tags_per_month Tags" %>
+Weekly Sales:
+	 <%= "#{number_to_currency (@roi_survey.total_weekly_sales)}" %>
+Meat Sales %:
+	 <%= "#{@roi_survey.meat_sales_percent}%" %>
+Number of POS terminals: 
+	<%= @roi_survey.num_pos_terminals %>
+Number of Exits:
+	<%= @roi_survey.num_exits %>
+Exit width:
+	 <%="#{@roi_survey.exit_width_ft} feet" %>
+==================================================
+Result: 
+www.synqtech.com/roi_surveys/<%= @roi_survey.id %>

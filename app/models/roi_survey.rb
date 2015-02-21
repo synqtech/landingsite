@@ -1,6 +1,6 @@
 class RoiSurvey < ActiveRecord::Base
 
-	validates_presence_of :store_sq_ft, :haba, :cctv, :walking_svc, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :num_pos_terminals, :num_exits, :exit_width_ft
+	validates_presence_of :store_sq_ft, :haba, :cctv, :walking_svc, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :lpo_hours, :num_pos_terminals, :num_exits, :exit_width_ft
 
 	def self.square_footages
 		square_footages = {
@@ -26,6 +26,18 @@ class RoiSurvey < ActiveRecord::Base
 		}
 	end
 
+	def self.lpo_hours_select
+		sales = {
+			"Less Than 5 Hours"  => "1-5 Hours",
+			"6-10 Hours"  => "6-10 Hours",
+			"11-15 Hours"  => "11-16 Hours",
+			"16-20 Hours"  => "16-20 Hours",
+			"21-30 Hours"  => "21-30 Hours",
+			"31-40 Hours"  => "31-40 Hours",
+			"More than 40 Hours"  => "16-20 Hours",
+		}
+	end
+
 	def self.walking_services
 		ws = {"Yes, Internal" => "Yes, Internal",
 			  "Yes, External" => "Yes, External",
@@ -37,9 +49,9 @@ class RoiSurvey < ActiveRecord::Base
 		ew = {"3 feet" => 3, "4 feet" => 4, "6 feet" => 6, "Greater than 6 feet" => 7}
 	end
 
-	def self.percentages(increment)
+	def self.percentages(increment, start = 0, finish=100)
 		percentages = {}
-		for i in (0..100/increment)
+		for i in (start..finish/increment)
 			percentages["#{i*increment}%"] = (i*increment)
 			
 		end

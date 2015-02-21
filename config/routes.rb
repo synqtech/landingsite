@@ -1,5 +1,5 @@
 WCSTest::Application.routes.draw do
-  resources :roi_surveys
+  resources :roi_surveys , :except => 'index'
   get '/distributors', :to=>'distributors#new'
   resources :distributors
 

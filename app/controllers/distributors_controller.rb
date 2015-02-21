@@ -28,6 +28,7 @@ class DistributorsController < ApplicationController
 
     respond_to do |format|
       if @distributor.save
+        ContactMailer.distributor_signup(@distributor).deliver
         format.html { redirect_to @distributor, notice: 'Distributor was successfully created.' }
         format.json { render action: 'show', status: :created, location: @distributor }
       else
@@ -69,6 +70,6 @@ class DistributorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def distributor_params
-      params.require(:distributor).permit(:email, :name, :phone, :address_1, :address_2, :company, :zip, :province, :country)
+      params.require(:distributor).permit(:email, :name, :phone, :address_1, :address_2, :company, :zip, :city, :province, :country)
     end
 end

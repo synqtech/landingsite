@@ -9,5 +9,7 @@ class Distributor < ActiveRecord::Base
 	validates_presence_of :address_1
 	validates_presence_of :province
 	validates_presence_of :country
+	validates_presence_of :city
+	
 	
 end

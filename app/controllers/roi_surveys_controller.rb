@@ -28,6 +28,7 @@ class RoiSurveysController < ApplicationController
 
     respond_to do |format|
       if @roi_survey.save
+        ContactMailer.survey(@roi_survey).deliver
         format.html { redirect_to @roi_survey, notice: 'Roi survey was successfully created.' }
         format.json { render action: 'show', status: :created, location: @roi_survey }
       else
@@ -69,6 +70,6 @@ class RoiSurveysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roi_survey_params
-      params.require(:roi_survey).permit(:store_sq_ft, :haba, :cctv, :walking_svc, :existing_eas, :eas_effective, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :num_pos_terminals, :num_exits, :exit_width_ft)
+      params.require(:roi_survey).permit(:store_sq_ft, :haba, :cctv, :walking_svc, :existing_eas, :eas_effective, :lpo_hours, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :num_pos_terminals, :num_exits, :exit_width_ft)
     end
 end
