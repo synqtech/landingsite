@@ -94,7 +94,7 @@
         </thead>
         <tr>
           <th class="text-right">Competitor EAS</th>
-          <td><%= number_to_currency( comp_sr = (0.65 * 0.2 * (@roi_survey.total_weekly_sales * 0.0122) * 0.424 * 0.5 )) %></td>
+          <td><%= number_to_currency( comp_sr = (0.65 * 0.2 * (@roi_survey.total_weekly_sales * 0.0122) * 0.24 * 0.5 )) %></td>
           <td><%= number_to_currency( comp_monthly_total ) %></td>
           <td><%= number_to_currency( comp_sr - comp_monthly_total ) %></td>
         </tr>
@@ -127,7 +127,7 @@
       </table>
 
       <div class="text-center">
-        Total benefits break even after only <strong><%= (sq_actual/sq_total_benefit)*12/52 %> Months</strong>
+        Total benefits break even after only <strong><%= number_with_precision((sq_actual/sq_total_savings)*12/52, :precision => 1) %> Months</strong>
       </div>
 
     </div>
