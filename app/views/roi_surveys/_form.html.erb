@@ -101,9 +101,42 @@
         <%= radio_button_tag "roi_survey[existing_eas]", "true", nil %>&nbsp;<%= label_tag 'roi_survey_existing_eas_true', "Yes" %>
         <%= radio_button_tag "roi_survey[existing_eas]", "false", nil %>&nbsp;<%= label_tag 'roi_survey_existing_eas_false', "No" %></div>
     </div>
-    
-    
   </div>
+  <hr>
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+        <p class="lead">Does a third party count store inventory once per year?</p>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <%= radio_button_tag "roi_survey[third_party_inventory]", "true", nil %>&nbsp;<%= label_tag 'roi_survey_third_party_inventory_true', "Yes" %>
+        <%= radio_button_tag "roi_survey[third_party_inventory]", "false", nil %>&nbsp;<%= label_tag 'roi_survey_third_party_inventory_false', "No" %></div>
+    </div>
+  </div>
+  <hr>
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+        <p class="lead">Do you have a price reduction program for perishable deli items?</p>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <%= radio_button_tag "roi_survey[price_reduction_markdown]", "true", nil %>&nbsp;<%= label_tag 'roi_survey_price_reduction_markdown_true', "Yes" %>
+        <%= radio_button_tag "roi_survey[price_reduction_markdown]", "false", nil %>&nbsp;<%= label_tag 'roi_survey_price_reduction_markdown_false', "No" %></div>
+    </div>
+  </div>
+  <hr>
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+        <p class="lead">In the last 5 years, have you had a civil claim allegation whereby you successfully defended yourself? (ie. slip &amp; fall, false arrest, etc)</p>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <%= radio_button_tag "roi_survey[civil_claim_won]", "true", nil %>&nbsp;<%= label_tag 'roi_survey_civil_claim_won_true', "Yes" %>
+        <%= radio_button_tag "roi_survey[civil_claim_won]", "false", nil %>&nbsp;<%= label_tag 'roi_survey_civil_claim_won_false', "No" %></div>
+    </div>
+  </div>
+  
+  
   <hr>
   <div class="field form-group">
     <div class="row">

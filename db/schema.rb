@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221002611) do
+ActiveRecord::Schema.define(version: 20150226201034) do
 
   create_table "distributors", force: true do |t|
     t.string   "email"
@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(version: 20150221002611) do
     t.string   "ey"
     t.integer  "exit_width_ft"
     t.string   "lpo_hours"
+    t.boolean  "third_party_inventory"
+    t.boolean  "price_reduction_markdown"
+    t.boolean  "civil_claim_won"
   end
 
 end

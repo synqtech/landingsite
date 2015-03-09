@@ -15,6 +15,22 @@
   </header>
 </div>
 
+<% third_party_inventory = (@roi_survey.third_party_inventory ? 1:0) %> 
+<% walking_svc = ((@roi_survey.walking_svc == "Yes, Internal" || @roi_survey.walking_svc == "Yes, External") ? 1:0) %> 
+<% civil_claim_won = (@roi_survey.civil_claim_won ? 1:0 )%> 
+<% prm = (@roi_survey.price_reduction_markdown ? 1:0 )%> 
+
+<% estimated_shrink = (5-(4*(third_party_inventory + walking_svc + civil_claim_won + prm + (@roi_survey.cctv/10) + (@roi_survey.eas_effective/10))/6.0))/100 %>
+
+
+<% haba_perc     = (0.0+@roi_survey.haba)/100 %><br>
+<% meat_perc     = (0.0+@roi_survey.meat_sales_percent)/100 %><br>
+<% haba_theft_pc = haba_perc*0.2 %><br>
+<% meat_theft_pc = meat_perc*0.2 %><br>
+
+<% theft_shrink_pc    = estimated_shrink*(haba_theft_pc+meat_theft_pc) %>
+<% weekly_theft_total = theft_shrink_pc*@roi_survey.total_weekly_sales %>
+
 <div class="container">
   <div class="panel pad-25">
     <!-- <p id="notice"><%= notice %></p> -->
@@ -59,6 +75,7 @@
               <th>Total Labour Costs Per Month</th>
               <th>Monthly Total</th>
               <th>Annual Total</th>
+
             </tr>
           </thead>
 
@@ -78,8 +95,18 @@
             <td><%= number_to_currency(sq_labels*12) %></td>
 
           </tr>
+          <tr>
+            
+          </tr>
+          <tr>
+            <td colspan="2" align="right"><strong>Estimated Shrink From Theft%:</strong> <%= "#{theft_shrink_pc*100}%" %></td>
+            
+            <td>&nbsp;</td>
+            <td><strong>Weekly Shrink:</strong> <%= number_to_currency weekly_theft_total %></td>
+          </tr>
         </table>
     </div>
+
 
     <div class="panel panel-default">
       <div class="panel-heading text-center">Savings Comparison</div>
@@ -94,19 +121,18 @@
         </thead>
         <tr>
           <th class="text-right">Competitor EAS</th>
-          <td><%= number_to_currency( comp_sr = (0.65 * 0.2 * (@roi_survey.total_weekly_sales * 0.0122) * 0.24 * 0.5 )) %></td>
+          <td><%= number_to_currency( comp_sr = (0.65 * (@roi_survey.total_weekly_sales * theft_shrink_pc))) %></td>
           <td><%= number_to_currency( comp_monthly_total ) %></td>
           <td><%= number_to_currency( comp_sr - comp_monthly_total ) %></td>
         </tr>
         <tr>
           <th class="text-right">SYNQ EAS</th>
-          <td><%= number_to_currency(sq_sr = (0.9 * 0.38 * 0.424 * (@roi_survey.total_weekly_sales * 0.0122))) %></td>
+          <td><%= number_to_currency(sq_sr = (0.9 * ((@roi_survey.total_weekly_sales) * theft_shrink_pc ))) %></td>
           <td><%= number_to_currency( sq_monthly_total ) %></td>
           <td><%= number_to_currency( sq_total_savings = (sq_sr - sq_monthly_total) ) %></td>
         </tr>
       </table>
     </div>
-
 
     <div class="panel panel-default">
       <div class="panel-heading text-center">SYNQ Breakeven</div>

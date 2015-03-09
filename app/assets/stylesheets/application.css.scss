@@ -338,19 +338,19 @@ section {
 .feature {
 
 	&:nth-child(even) {
-		background: #f4f4f4;
-		border-top: 1px solid #d8d8d8;
-		border-bottom: 1px solid #d8d8d8;
+		background: #f4fbff;
+		border-top: 1px solid #dee4e8;
+		border-bottom: 1px solid #dee4e8;
 	}
 	padding-top: 50px;
 	padding-bottom: 50px;
 
 	&.dark {
-		background: #f4f4f4;
+		background: #f4fbff;
 
 		&.brands .brand-panel {
 			text-align: center;
-			border: 1px solid #d8d8d8;
+			border: 1px solid #dee4e8;
 			background: #fff;
 			padding: 25px 0px;
 			margin-bottom: 20px;
@@ -381,7 +381,7 @@ section {
 				padding-bottom: 25px;
 
 				&:nth-child(odd) {
-					background: #fafaff;
+					background: #f4fbff;
 					border-top: 1px solid #eaeaef;
 					border-bottom: 1px solid #eaeaef;
 					

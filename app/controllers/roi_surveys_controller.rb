@@ -70,6 +70,6 @@ class RoiSurveysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roi_survey_params
-      params.require(:roi_survey).permit(:store_sq_ft, :haba, :cctv, :walking_svc, :existing_eas, :eas_effective, :lpo_hours, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :num_pos_terminals, :num_exits, :exit_width_ft)
+      params.require(:roi_survey).permit(:store_sq_ft, :haba, :cctv, :walking_svc, :third_party_inventory, :civil_claim_won, :price_reduction_markdown, :existing_eas, :eas_effective, :lpo_hours, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :num_pos_terminals, :num_exits, :exit_width_ft)
     end
 end
