@@ -1,3 +1,6 @@
+<% content_for :title do %>
+Calculate Return of Investment
+<%end%>
 <% content_for :title => 'Calculate Return of Investment' %>
 <div id="distributors">
   <header>
@@ -139,25 +142,28 @@
       <table class="table text-center">
         
         <tr>
-          <th class="text-right">SYNQ One Year Net Benefit</th>
+          <th class="text-right">SYNQ One Year Net Cumulative Benefit</th>
           <td><%= number_to_currency( (sq_total_savings * 52) - sq_actual ) %></td>
         </tr>
         <tr>
-          <th class="text-right">SYNQ Two Year Net Benefit</th>
+          <th class="text-right">SYNQ Two Year Net Cumulative Benefit</th>
           <td><%= number_to_currency( (sq_total_savings * 104) - sq_actual ) %></td>
         </tr>
         <tr>
-          <th class="text-right">SYNQ Two Three Net Benefit</th>
+          <th class="text-right">SYNQ Two Three Net Cumulative Benefit</th>
           <td><%= number_to_currency(sq_total_benefit = ( (sq_total_savings * 156) - sq_actual )) %></td>
         </tr>
       </table>
 
       <div class="text-center">
-        Total benefits break even after only <strong><%= number_with_precision((sq_actual/sq_total_savings)*12/52, :precision => 1) %> Months</strong>
+        EAS ROI Breakeven: <strong><%= number_with_precision((sq_actual/sq_total_savings)*12/52, :precision => 1) %> Months</strong>
       </div>
 
     </div>
-    <%= link_to 'Calculate Again', new_roi_survey_path, :class=>"btn btn-primary pull-right btn-lg" %>
+    
+    <div class="text-center">
+      <a href="mailto:contact@synqtech.com" class="btn btn-primary btn-lg">Contact SYNQ</a>
+    </div>
     <div class="clearfix"></div>
   </div>
 </div>

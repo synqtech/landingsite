@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226201034) do
+ActiveRecord::Schema.define(version: 20150309231428) do
 
   create_table "distributors", force: true do |t|
     t.string   "email"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150226201034) do
     t.boolean  "third_party_inventory"
     t.boolean  "price_reduction_markdown"
     t.boolean  "civil_claim_won"
+    t.boolean  "digi"
   end
 
 end

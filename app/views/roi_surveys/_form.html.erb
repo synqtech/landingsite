@@ -12,39 +12,12 @@
     </div>
   <% end %>
 
-
-  <div class="field form-group">
-    
-    <div class="row">
-      <div class="col-sm-6 col-lg-8">
-        
-        <p class="lead">How big is your store?</p>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <%= f.collection_select :store_sq_ft, RoiSurvey.square_footages, :last, :first, {}, :class=>"form-control" %>
-      </div>
-    </div>
-    
-
-  </div>
-  <hr>
+  <%= f.hidden_field :digi, value: @roi_survey.digi %>
+  
   <div class="field form-group">
     <div class="row">
       <div class="col-sm-6 col-lg-8">
-        <p class="lead">What percentage of sales are HABA (Health and Beauty Accessories)</p>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <%= f.collection_select :haba, RoiSurvey.percentages(1,0,25), :last, :first, {}, :class=>"form-control" %>
-      </div>
-    </div>
-    
-    
-  </div>
-  <hr>
-  <div class="field form-group">
-    <div class="row">
-      <div class="col-sm-6 col-lg-8">
-        <p class="lead">How effective is your CCTV system?</p>
+        <p class="lead">Overall, how effective is your CCTV system?</p>
       </div>
       <div class="col-sm-6 col-lg-4"><table class="table">
           <thead>
@@ -61,7 +34,7 @@
           </thead>
           <tr>
             <% 10.times do |i| %>
-              <td><%= f.radio_button :cctv, i %></td>
+              <td><%= f.radio_button :cctv, i+1 %><br/><%= i+1 %></td>
             <% end %>
           </tr>
         </table></div>
@@ -69,6 +42,57 @@
     
     
   </div>
+
+  <hr>
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+        <p class="lead">Overall, how effective is your current EAS system?</p>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="4">1 (Not effective)</th> 
+              
+              <th colspan="1"></th>
+              <th colspan="1"></th>
+              <th colspan="1"></th>
+              <th colspan="1"></th>
+              <th colspan="1"></th>
+              <th colspan="1">10 (Very Effective)</th>
+            </tr>
+          </thead>
+          <tr>
+            <% 10.times do |i| %>
+              <td><%= f.radio_button :eas_effective, i %><br/><%= i+1 %></td>
+            <% end %>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+    
+    
+  </div>
+
+  <hr>
+  <div class="field form-group">
+    
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+        
+        <p class="lead">How big is your store?</p>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <%= f.collection_select :store_sq_ft, RoiSurvey.square_footages, :last, :first, {}, :class=>"form-control" %>
+      </div>
+    </div>
+    
+
+  </div>
+  
+
   <hr>
   <div class="field form-group">
     <div class="row">
@@ -92,14 +116,29 @@
     
   </div>
   <hr>
+
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+        <p class="lead">What percentage of sales are HABA (Health and Beauty Accessories)</p>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <%= f.collection_select :haba, RoiSurvey.percentages(1,0,25), :last, :first, {}, :class=>"form-control" %>
+      </div>
+    </div>
+    
+    
+  </div>
+  <hr>
+
   <div class="field form-group">
     <div class="row">
       <div class="col-sm-6 col-lg-8">
         <p class="lead">Does your store have an existing EAS system in place?</p>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <%= radio_button_tag "roi_survey[existing_eas]", "true", nil %>&nbsp;<%= label_tag 'roi_survey_existing_eas_true', "Yes" %>
-        <%= radio_button_tag "roi_survey[existing_eas]", "false", nil %>&nbsp;<%= label_tag 'roi_survey_existing_eas_false', "No" %></div>
+        <%= f.radio_button :existing_eas, "true" %>&nbsp;<%= label_tag 'roi_survey_existing_eas_true', "Yes" %>
+        <%= f.radio_button :existing_eas, "false" %>&nbsp;<%= label_tag 'roi_survey_existing_eas_false', "No" %></div>
     </div>
   </div>
   <hr>
@@ -109,8 +148,8 @@
         <p class="lead">Does a third party count store inventory once per year?</p>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <%= radio_button_tag "roi_survey[third_party_inventory]", "true", nil %>&nbsp;<%= label_tag 'roi_survey_third_party_inventory_true', "Yes" %>
-        <%= radio_button_tag "roi_survey[third_party_inventory]", "false", nil %>&nbsp;<%= label_tag 'roi_survey_third_party_inventory_false', "No" %></div>
+        <%= f.radio_button :third_party_inventory, "true" %>&nbsp;<%= label_tag 'roi_survey_third_party_inventory_true', "Yes" %>
+        <%= f.radio_button :third_party_inventory, "false" %>&nbsp;<%= label_tag 'roi_survey_third_party_inventory_false', "No" %></div>
     </div>
   </div>
   <hr>
@@ -120,8 +159,8 @@
         <p class="lead">Do you have a price reduction program for perishable deli items?</p>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <%= radio_button_tag "roi_survey[price_reduction_markdown]", "true", nil %>&nbsp;<%= label_tag 'roi_survey_price_reduction_markdown_true', "Yes" %>
-        <%= radio_button_tag "roi_survey[price_reduction_markdown]", "false", nil %>&nbsp;<%= label_tag 'roi_survey_price_reduction_markdown_false', "No" %></div>
+        <%= f.radio_button :price_reduction_markdown, "true" %>&nbsp;<%= label_tag 'roi_survey_price_reduction_markdown_true', "Yes" %>
+        <%= f.radio_button :price_reduction_markdown, "false" %>&nbsp;<%= label_tag 'roi_survey_price_reduction_markdown_false', "No" %></div>
     </div>
   </div>
   <hr>
@@ -131,58 +170,14 @@
         <p class="lead">In the last 5 years, have you had a civil claim allegation whereby you successfully defended yourself? (ie. slip &amp; fall, false arrest, etc)</p>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <%= radio_button_tag "roi_survey[civil_claim_won]", "true", nil %>&nbsp;<%= label_tag 'roi_survey_civil_claim_won_true', "Yes" %>
-        <%= radio_button_tag "roi_survey[civil_claim_won]", "false", nil %>&nbsp;<%= label_tag 'roi_survey_civil_claim_won_false', "No" %></div>
+        <%= f.radio_button :civil_claim_won, "true" %>&nbsp;<%= label_tag "roi_survey_civil_claim_won_true", "Yes" %>
+        <%= f.radio_button :civil_claim_won, "false" %>&nbsp;<%= label_tag "roi_survey_civil_claim_won_false", "No" %></div>
     </div>
   </div>
   
   
-  <hr>
-  <div class="field form-group">
-    <div class="row">
-      <div class="col-sm-6 col-lg-8">
-        <p class="lead">How effective is your current EAS System?</p>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <table class="table">
-          <thead>
-            <tr>
-              <th colspan="4">1 (Not effective)</th> 
-              
-              <th colspan="1"></th>
-              <th colspan="1"></th>
-              <th colspan="1"></th>
-              <th colspan="1"></th>
-              <th colspan="1"></th>
-              <th colspan="1">10 (Very Effective)</th>
-            </tr>
-          </thead>
-          <tr>
-            <% 10.times do |i| %>
-              <td><%= f.radio_button :eas_effective, i %></td>
-            <% end %>
-          </tr>
-        </table>
-        
-      </div>
-    </div>
-    
-    
-  </div>
-  <hr>
-  <div class="field form-group">
-    <div class="row">
-      <div class="col-sm-6 col-lg-8">
-      <p class="lead">How many EAS tags do you currently use per month?</p>
-      </div>
-      <div class="col-sm-6 col-lg-4"><div class="input-group">   
-          <span class="input-group-addon" id="roi_survey_num_exits_6_feet">#</span>
-          <%= f.number_field :eas_tags_per_month, :class=>"form-control" %>
-        </div></div>
-    </div>
-    
-    
-  </div>
+  
+
   <hr>
   <div class="field form-group">
     <div class="row">
@@ -205,6 +200,23 @@
     
     
   </div>
+  
+  <hr>
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+      <p class="lead">How many EAS tags do you currently use per month?</p>
+      </div>
+      <div class="col-sm-6 col-lg-4"><div class="input-group">   
+          <span class="input-group-addon" id="roi_survey_num_exits_6_feet">#</span>
+          <%= f.number_field :eas_tags_per_month, :class=>"form-control" %>
+        </div></div>
+    </div>
+    
+    
+  </div>
+
+
   <hr>
   <div class="field form-group">
     <div class="row">

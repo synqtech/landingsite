@@ -2,19 +2,37 @@
 Calculate Return of Investment
 <%end%>
 <div id="distributors">
-	<header>
-		<div id="background" style="background-image: url(<%= image_url 'store.jpg' %>)"
-			data-0="-ms-transform: translate(0,-100px);-moz-transform: translate(0,-100px);-webkit-transform: translate(0,-100px);transform: translate(0,-100px);" data-200="-ms-transform: translate(0,-50px);-moz-transform: translate(0,-50px);-webkit-transform: translate(0,-50px);transform: translate(0,-50px);"
+	<% if @roi_survey.digi %>
 
-		></div>
-		<div id="map-cover">
-			<h1 class="center">ROI Calculator</h1>
-		</div>
-		<div class="back-wrap whoosh-left">
-			<%= link_to raw("<i class=\"fa fa-arrow-left\"></i>"), root_url, :class=>"btn btn-round btn-default" %>
-		</div>
-		
-	</header>
+		<header class="digi">
+			<div id="background" style="background-image: url(<%= image_url 'store.jpg' %>)"
+			  data-0="-ms-transform: translate(0,-100px);-moz-transform: translate(0,-100px);-webkit-transform: translate(0,-100px);transform: translate(0,-100px);" data-200="-ms-transform: translate(0,-50px);-moz-transform: translate(0,-50px);-webkit-transform: translate(0,-50px);transform: translate(0,-50px);"
+
+			></div>
+			<div id="map-cover">
+			  <h1 class="center">EAS ROI Calculator</h1>
+			</div>
+			
+			<%= image_tag 'digi-logo.png', :class=>"digi-logo" %>
+
+		</header>
+
+	<% else %>
+
+		<header>
+			<div id="background" style="background-image: url(<%= image_url 'store.jpg' %>)"
+				data-0="-ms-transform: translate(0,-100px);-moz-transform: translate(0,-100px);-webkit-transform: translate(0,-100px);transform: translate(0,-100px);" data-200="-ms-transform: translate(0,-50px);-moz-transform: translate(0,-50px);-webkit-transform: translate(0,-50px);transform: translate(0,-50px);"
+
+			></div>
+			<div id="map-cover">
+				<h1 class="center">EAS ROI Calculator</h1>
+			</div>
+			<div class="back-wrap whoosh-left">
+				<%= link_to raw("<i class=\"fa fa-arrow-left\"></i>"), root_url, :class=>"btn btn-round btn-default" %>
+			</div>
+			
+		</header>
+	<% end %>
 </div>
 
 <div class="container">

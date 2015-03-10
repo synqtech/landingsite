@@ -13,6 +13,8 @@ $soft_primary: lighten($primary, 40%);
 		.btn {
 			display: none !important;
 		}
+
+
 	}
 }
 
@@ -90,6 +92,23 @@ $soft_primary: lighten($primary, 40%);
 		}
 		
 	}
+	header.digi {
+		#map-cover {
+			background: rgba(19, 141, 113, 0.8) !important;
+
+		}
+		border-bottom: 20px solid rgba(19,141,113,0.8) !important;
+
+		.digi-logo {
+			width: 110px;
+			height: 110px;
+			position: absolute;
+			left: 20px;
+			top: 30px;
+			z-index: 100;
+		}
+	}
+
 
 	.panel.padded {
 		padding: 20px;
