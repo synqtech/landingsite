@@ -131,6 +131,34 @@
   </div>
   <hr>
 
+  
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+        <p class="lead">What percentage of sales is meat?</p>
+      </div>
+      <div class="col-sm-6 col-lg-4"><%= f.collection_select :meat_sales_percent, RoiSurvey.percentages(1,0,35), :last, :first, {}, :class=>"form-control" %></div>
+    </div>
+    
+    
+  </div>
+
+  <hr>
+
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-sm-6 col-lg-8">
+        <p class="lead">What are your total weekly sales?</p>
+      </div>
+      <div class="col-sm-6 col-lg-4"><%= f.collection_select :total_weekly_sales, RoiSurvey.weekly_sales, :last, :first, {}, :class=>"form-control" %></div>
+    </div>
+    
+    
+  </div>
+  
+
+  <hr>
+
   <div class="field form-group">
     <div class="row">
       <div class="col-sm-6 col-lg-8">
@@ -179,38 +207,17 @@
   
 
   <hr>
-  <div class="field form-group">
-    <div class="row">
-      <div class="col-sm-6 col-lg-8">
-        <p class="lead">What are your total weekly sales?</p>
-      </div>
-      <div class="col-sm-6 col-lg-4"><%= f.collection_select :total_weekly_sales, RoiSurvey.weekly_sales, :last, :first, {}, :class=>"form-control" %></div>
-    </div>
-    
-    
-  </div>
-  <hr>
-  <div class="field form-group">
-    <div class="row">
-      <div class="col-sm-6 col-lg-8">
-        <p class="lead">What percentage of sales is meat?</p>
-      </div>
-      <div class="col-sm-6 col-lg-4"><%= f.collection_select :meat_sales_percent, RoiSurvey.percentages(1,0,25), :last, :first, {}, :class=>"form-control" %></div>
-    </div>
-    
-    
-  </div>
+
+
   
-  <hr>
   <div class="field form-group">
     <div class="row">
       <div class="col-sm-6 col-lg-8">
       <p class="lead">How many EAS tags do you currently use per month?</p>
       </div>
-      <div class="col-sm-6 col-lg-4"><div class="input-group">   
-          <span class="input-group-addon" id="roi_survey_num_exits_6_feet">#</span>
-          <%= f.number_field :eas_tags_per_month, :class=>"form-control" %>
-        </div></div>
+      <div class="col-sm-6 col-lg-4">
+          <%= f.collection_select :eas_tags_per_month, RoiSurvey.labels, :last, :first, {}, :class=>"form-control" %>
+        </div>
     </div>
     
     
@@ -221,10 +228,9 @@
   <div class="field form-group">
     <div class="row">
       <div class="col-sm-6 col-lg-8"><p class="lead">How many POS terminals are in your store?</p></div>
-      <div class="col-sm-6 col-lg-4"><div class="input-group">
-          <span class="input-group-addon" id="roi_survey_num_exits_6_feet">#</span>
-          <%= f.number_field :num_pos_terminals, :class=>"form-control" %>
-        </div></div>
+      <div class="col-sm-6 col-lg-4">
+        <%= f.collection_select :num_pos_terminals, RoiSurvey.ints(1,1,15), :last, :first, {}, :class=>"form-control" %>
+      </div>
     </div>
     
     
@@ -234,15 +240,15 @@
     <div class="row">
       <div class="col-sm-6 col-lg-8"><p class="lead">How many customer exits?</p></div>
       <div class="col-sm-6 col-lg-4">
-        <div class="input-group">
-          <span class="input-group-addon" id="roi_survey_num_exits">#</span>
-          <%= f.number_field :num_exits, :class=>"form-control" %>
-        </div>
+        
+        <%= f.collection_select :num_exits, RoiSurvey.ints(1,1,10), :last, :first, {}, :class=>"form-control" %>
+        
       </div>
     </div>
     
     
   </div>
+
   <hr>
   <div class="field form-group">
     <div class="row">
@@ -259,6 +265,7 @@
     
     
   </div>
+
   <hr>
   <div class="actions text-center">
     <%= f.submit "Calculate", :class=>"btn btn-lg btn-primary", :style=>"width: 280px" %>

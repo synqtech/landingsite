@@ -1,7 +1,7 @@
 class RoiSurvey < ActiveRecord::Base
 
 	validates_presence_of :store_sq_ft, :haba, :cctv, :walking_svc, :eas_tags_per_month, :total_weekly_sales, :meat_sales_percent, :lpo_hours, :num_pos_terminals, :num_exits, :exit_width_ft,  :eas_effective, :lpo_hours
-	
+
 
 	def self.square_footages
 		square_footages = {
@@ -26,6 +26,23 @@ class RoiSurvey < ActiveRecord::Base
 			"Greater Than 850,000"  => 900000
 		}
 	end
+
+	def self.labels
+		sales = {
+			"Less Than 1,000"  => 1000,
+			"5,000 - 10,000"   => 7500,
+			"10,000 - 15,000"  => 12500,
+			"15,000 - 20,000"  => 17500,
+			"20,000 - 25,000"  => 22500,
+			"25,000 - 35,000"  => 30000,
+			"35,000 - 45,000"  => 40000,
+			"45,000 - 55,000"  => 500000,
+			"55,000 - 65,000"  => 600000,
+			"More Than 65,000" => 700000,
+
+		}
+	end
+
 
 	def self.lpo_hours_select
 		sales = {
@@ -56,8 +73,18 @@ class RoiSurvey < ActiveRecord::Base
 			percentages["#{i*increment}%"] = (i*increment)
 			
 		end
-
 		return percentages
+	end
+
+	def self.ints (increment, start = 0, finish=100)
+
+		ints = {}
+		for i in (start..finish/increment)
+			ints["#{i*increment}"] = (i*increment)
+			
+		end
+		return ints
+
 	end
 	def _num_gates_needed
 		if self.exit_width_ft > 4
