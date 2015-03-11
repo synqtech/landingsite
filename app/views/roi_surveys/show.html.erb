@@ -102,7 +102,7 @@ Calculate Return of Investment
             
           </tr>
           <tr>
-            <td colspan="2" align="right"><strong>Estimated Shrink From Theft%:</strong> <%= "#{theft_shrink_pc*100}%" %></td>
+            <td colspan="2" align="right"><strong>Estimated Shrink From Theft%:</strong> <%= "#{number_with_precision(theft_shrink_pc*100, :precision=>3)}%" %></td>
             
             <td>&nbsp;</td>
             <td><strong>Weekly Shrink:</strong> <%= number_to_currency weekly_theft_total %></td>
@@ -160,7 +160,7 @@ Calculate Return of Investment
         <!-- BREAKEVEN IS CORRECT - ENSURE NUMBER PRINTED IS > 0 -->
         
           <div class="text-center">
-            <strong>Breakeven will occur</strong> in <%= breakeven %> months.
+            <strong>Breakeven will occur</strong> in <%= number_with_precision( breakeven, :precision=>1 ) %> months.
           </div>
         <% else %>
           <div class="text-center">
