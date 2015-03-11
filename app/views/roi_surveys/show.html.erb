@@ -142,25 +142,33 @@ Calculate Return of Investment
     <div class="panel panel-default">
       <div class="panel-heading text-center">SYNQ Breakeven</div>
       <table class="table text-center">
+        <% breakeven = (sq_actual/sq_total_savings)*12/52 %>
+        <% if breakeven > 0 %>
+          <tr>
+            <th class="text-right">SYNQ One Year Net Cumulative Benefit</th>
+            <td><%= number_to_currency( (sq_total_savings * 52) - sq_actual ) %></td>
+          </tr>
+          <tr>
+            <th class="text-right">SYNQ Two Year Net Cumulative Benefit</th>
+            <td><%= number_to_currency( (sq_total_savings * 104) - sq_actual ) %></td>
+          </tr>
+          <tr>
+            <th class="text-right">SYNQ Two Three Net Cumulative Benefit</th>
+            <td><%= number_to_currency(sq_total_benefit = ( (sq_total_savings * 156) - sq_actual )) %></td>
+          </tr>
+        </table>
+        <!-- BREAKEVEN IS CORRECT - ENSURE NUMBER PRINTED IS > 0 -->
         
-        <tr>
-          <th class="text-right">SYNQ One Year Net Cumulative Benefit</th>
-          <td><%= number_to_currency( (sq_total_savings * 52) - sq_actual ) %></td>
-        </tr>
-        <tr>
-          <th class="text-right">SYNQ Two Year Net Cumulative Benefit</th>
-          <td><%= number_to_currency( (sq_total_savings * 104) - sq_actual ) %></td>
-        </tr>
-        <tr>
-          <th class="text-right">SYNQ Two Three Net Cumulative Benefit</th>
-          <td><%= number_to_currency(sq_total_benefit = ( (sq_total_savings * 156) - sq_actual )) %></td>
-        </tr>
-      </table>
-
-      <div class="text-center">
-        EAS ROI Breakeven: <strong><%= number_with_precision((sq_actual/sq_total_savings)*12/52, :precision => 1) %> Months</strong>
-      </div>
-
+          <div class="text-center">
+            <strong>Breakeven will occur</strong> in <%= breakeven %> months.
+          </div>
+        <% else %>
+          <div class="text-center">
+            Breakeven will not occur with shrink reduction alone. 
+          </div>
+        <% end %>
+      
+        </table>
     </div>
     
     <div class="text-center">
