@@ -1,9 +1,9 @@
 WCSTest::Application.routes.draw do
-  resources :quotes
+  #resources :quotes
 
-  resources :quote_lines
-  get "products/search"
-  resources :products
+  #resources :quote_lines
+  #get "products/search"
+  #resources :products
 
 
   resources :roi_surveys , :except => 'index'

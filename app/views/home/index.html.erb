@@ -240,7 +240,13 @@
 		
 
 		<div class="row">
-			<div class="col-md-6">
+
+
+			<div class="col-md-2">
+				&nbsp;
+			</div>
+
+			<div class="col-md-8">
 				<h1><%= image_tag 'lead/barcode.png', :class=>'heading-img' %>EAS Systems</h1>
 				<p class="lead center-when-small">State of the Art Article Surveillance Systems</p>
 
@@ -252,13 +258,33 @@
 
 				
 			</div>
-			<div class="col-md-6">
-				<%= image_tag "eas/large-graphic.png", :class=>"responsive", :style=>"width: 100%; height: auto; max-width: 400px;" %>
-			</div>
 
+			<div class="col-md-2">
+				&nbsp;
+			</div>
 		</div>
 		<hr>
 		<div class="row">
+			<div class="row">
+				
+				<div class="col-sm-3">
+
+					<%= image_tag "synqgates.png", :class=>"responsive" %>
+				</div>
+				<div class="col-sm-9">
+						
+					<h2 class="" style="margin: 25px;">SYNQ EAS Gates</h2>	
+					<p class="lead">SYNQ’s very own hi-frequency tags are low-profile, discreet, and effective. Best of all, they are produced in Canada. SYNQ's high-frequency tags are ideal for larger store exits and offer superior range to anything else in the marketplace.
+					</p>
+
+					<p class="center">Learn More:</p>
+					<%= link_to raw("<i class=\"fa fa-download\"></i> SYNQ EAS.pdf"), "http://corporatedraft.com/synq/pdf/SYNQ-EAS.pdf", :class=>"btn  btn-primary btn-block", :target=>"_blank", :style=>"margin: 10px 0px 0px 0px" %>
+					
+				
+				</div>
+				
+			</div>
+
 			<div class="col-md-9">
 			
 				<h2 class="center">How It Works</h2>
@@ -311,28 +337,7 @@
 					</div>
 			</div>
 		</div>
-		<div class="row">
-			<h2 class="center">Pick Your Solution</h2>
-			<div class="col-sm-6 center">
-					<div class="box">
-						<h3 class="light ">Large Exit</h3>
-						<p>SYNQ’s very own hi-frequency tags are low-profile, discreet, and effective. Best of all, they are produced in Canada. SYNQ's high-frequency tags are ideal for larger gates and offer superior range to anything else.
-						</p>
-						<%= link_to raw("<i class=\"fa fa-download\"></i> SYNQ EAS.pdf"), "http://corporatedraft.com/synq/pdf/SYNQ-EAS.pdf", :class=>"btn  btn-primary btn-block", :target=>"_blank", :style=>"margin: 10px 0px 0px 0px" %>
-						
-					</div>
-			</div>
-			<div class="col-sm-6 center">
-					<div class="box">
-					<h3 class="light">Small Exit</h3>
-					<p>SYNQ works closely with Tag-It EAS for low frequency tags. These are ideal for smaller exit sizes and are also compatible with your existing printers.</p>
-
-					<a href="http://tagit-eas.com" target="_blank" class="btn  btn-primary btn-block">
-						<%= image_tag 'tagit-white.png' %>
-					</a>
-				</div>
-			</div>
-		</div>
+		
 	<div class="clearfix"></div>
 	
 </section>
