@@ -1,0 +1,86 @@
+<% content_for :title do %>
+  Quote for <%= @quote.bill_to %>
+<% end %>
+
+<div class="white container pad-25 quote">
+  <table class="fullwidth">
+    <tr>
+      <td width="30%">
+        <%= image_tag "synq_logo.svg", :class=>"responsive" %>
+      </td>
+      <td width="20%">
+      <td width="50%">
+        <div class="grey-highlight text-right">
+          <strong>Quote:</strong> <%= @quote.quote_number %><br>
+          All Quotes are Subject to Applicable Taxes.
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="clearfix"></div>
+  <table class="fullwidth">
+    <tr>
+      <td>
+        <strong>Bill To:</strong><br>
+        <%= @quote.bill_to %><br>
+        <%= @quote.address_1 %><br>
+        <% if @quote.address_2 %>
+          <%= @quote.address_2 %><br>
+        <% end %>
+        <%= @quote.postal_code %><br>
+        <%= @quote.city%><br>
+        <%= @quote.province%><br>
+      </td>
+      <td class="text-right">
+        <strong>Estimate Number:</strong> <%= @quote.quote_number %><br>
+        <strong>Date:</strong> <%= @quote.created_at.strftime("%F") %><br>
+        <strong>Expires On:</strong> <%= (@quote.created_at + 2.weeks).strftime("%F") %><br>
+        <strong>Estimate Number:</strong> <%= @quote.quote_number %><br>
+      </td>
+    </tr>
+  </table>
+
+  <% total = 95000 %>
+  <% dicount_total = 2000 %>
+
+  <hr>
+
+  <table class="striped table">
+      <tr>
+        <th width="50%" class="text-left">Product</th>
+        <th width="15%" class="text-center">Price</th>
+        <th width="10%" class="text-center">QTY</th>
+        <th width="25%" class="text-center">Amount</th>
+      </tr>
+    <% @quote.quote_lines.each do |ql| %>
+      <tr>
+        <td width="50%" class="text-left"><strong><%= ql.product.name %></strong><br><p><%= ql.product.description %></p></td>    
+        <td width="15%" class="text-center"><%= ql.product.msrp %></td>   
+        <td width="10%" class="text-center"><%= ql.qty %></td>
+        <td width="25%" class="text-center"><strong><%= number_to_currency(ql.qty*ql.product.msrp) %></strong></td>   
+      </tr>
+    <% end %>
+
+
+     
+    
+  </table>
+ 
+  <hr>
+    <table class="fullwidth">
+    <tr>
+      <td>
+        <p>Payment Terms: 50% due at time of signing. Remainder due Net 14 days upon installation. 3 years parts &amp; labour warranty on SYNQ and Acumen products.</p>
+        <p><i><strong>Note:</strong> <%= @quote.note %></i></p>
+      </td>
+      <td class="text-right">
+        <strong>Total:</strong> <%= total %><br>
+        <strong>Date:</strong> <%= @quote.created_at.strftime("%F") %><br>
+        <strong>Expires On:</strong> <%= (@quote.created_at + 2.weeks).strftime("%F") %><br>
+        <strong>Estimate Number:</strong> <%= @quote.quote_number %><br>
+      </td>
+    </tr>
+  </table>
+
+
+</div>

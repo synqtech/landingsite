@@ -1,0 +1,147 @@
+
+
+<div class="topbar"></div>
+
+<div class="searchbar">
+	<div class="search-wrap">
+		<div class="input-group">
+		  <span class="input-group-addon" id="product-search"><i class="fa fa-search"></i></span>
+		  <input type="text" class="form-control" placeholder="Search for products..." aria-describedby="product-search" id="q" name="q" >
+		</div>
+	</div>
+</div>
+
+<div class="searchdropdown-wrap">
+	<div class="searchdropdown">
+		<div class="panel calculateheightforkeyboard">
+			<table class="products">
+				<% Product.all.each do |product| %>
+				
+					<tr>
+						<td><%= image_tag product.image.url(:thumb) %></td>
+						<td><strong><%= product.name %></strong>
+							<p><%= product.description %></p>
+						</td>
+					</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="container" style="margin-top: 80px">
+	<%= form_for(@quote) do |f| %>
+	  <% if @quote.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+	      <ul>
+	      <% @quote.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	  <div class="panel pad-25">
+		  <div class="field">
+		    
+		    <%= f.text_field :quote_number, :class=>"form-control input-lg", :placeholder=>"Quote Number" %>
+		  </div>
+
+		  <div class="field">
+		    
+		    <%= f.text_field :bill_to, :class=>"form-control", :placeholder=>"Personal/Company Name" %>
+		  </div>
+		  <div class="field">
+		    
+		    <%= f.text_field :address_1, :class=>"form-control", :placeholder=>"Address"%>
+		  </div>
+		  <div class="field">
+		    
+		    <%= f.text_field :address_2, :class=>"form-control", :placeholder=>"Unit \#" %>
+		  </div>
+		  <div class="field">
+		    
+		    <%= f.text_field :postal_code, :class=>"form-control", :placeholder=>"Postal/ZIP Code" %>
+		  </div>
+		  <div class="field">
+		    
+		    <%= f.text_field :city, :class=>"form-control", :placeholder=>"City" %>
+		  </div>
+		  <div class="field">
+		    
+		    <%= f.text_field :province, :class=>"form-control", :placeholder=>"Province" %>
+		  </div>
+		  <hr>
+		  <div class="field">
+		  	<%= f.label :note, "Optional Note" %>  <br>
+		    <%= f.text_area :note, :class=>"form-control" %>
+		  </div>
+		 <%= link_to_add_association 'add line', f, :quote_lines, :render_options =>{:locals=>{ql: Product.first}} %>
+		  <div class="actions clearfix pad-25">
+		    <%= f.submit "Create", :class=>"btn btn-primary btn-lg pull-right" %>
+		  </div>
+		</div>
+	<% end %>
+
+</div>
+<% include_javascript '/quotes/marcopolo.js' %>
+<script>
+	$(document).ready(function() {
+		
+		$(".searchdropdown-wrap").hide();
+
+		$("#q").click(function() {
+			$(".searchdropdown-wrap").fadeIn();
+		})
+
+		//Key down in search box
+		$("#q").keydown(function(e) {
+
+			var jqxhr = $.getJSON( "<%= root_url %>products/search.json?q="+$("#q").val(), function() {
+			  // console.log( "success" );
+			})
+			  .done(function(data) {
+			    $(".products").empty();
+			    
+			    var items = [];
+			    console.log(data)
+				$.each( data, function( key, val ) {
+				    items.push( "<tr class=\"product\" data-msrp='"+val['msrp']+"' data-pid='"+val['id']+"'' data-id='" + key + "'><td><img src='"+ val.thumb_url +"'></td><td><strong>" + val.name +"</strong><p>"+val.description+"</p></td></tr>" );
+				});
+				 
+				$( "<table/>", {
+				    "class": "products-list",
+				    html: items.join( "" )
+				}).appendTo( ".products" );
+
+			  })
+			  .fail(function() {
+			    // console.log( "error" );
+			  })
+			  .always(function() {
+			    // console.log( "complete" );
+			  });
+			 
+			// Perform other work here ...
+			 
+			// Set another completion function for the request above
+			jqxhr.complete(function() {
+			  // console.log( "second complete" );
+			});
+
+		})
+
+		$(".searchdropdown-wrap").click(function(e) {
+		    if( e.target !== this )  {
+				return;
+				
+			}
+
+			$(this).fadeOut();
+		})
+			
+	})
+	
+
+	
+</script>

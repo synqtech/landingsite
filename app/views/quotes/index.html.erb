@@ -1,0 +1,38 @@
+<%= render partial:'layouts/admin_nav' %>
+
+<div class="container">
+  <div class="panel pad-25">
+    
+    <% if @quotes.count > 0 %>
+      <% @quotes.all.reverse.each do |q| %>
+        <table class="striped table" style="width: 100%">
+          <tr>
+            <th>PAID</th>
+            <th>Quote #</th>
+            <th colspan="2">Actions</th>
+            
+          </tr>
+
+          <tr>
+            <td>
+              <i class="fa fa-check not-paid"></i>
+            </td>
+            <td>
+              <strong><%= link_to q.quote_number, q %></strong>
+            </td>
+            <td>
+              <%= link_to "Edit", edit_quote_path(q) %>
+            </td>
+            <td>
+              <strong><%= button_to "Delete", q, :method=>:delete, :class=>"btn-danger btn btn-xs" %></strong>
+            </td>
+          </tr>
+          
+        </table>
+      <% end %>
+    <% else %>
+      <div class="text-center">No quotes have been added. <%= link_to "Create one now.", new_quote_path%></div>
+    <% end %>
+
+  </div>
+</div>

@@ -11,4 +11,8 @@ module ApplicationHelper
 	    '(%s) %s-%s' % [ digits[0,3], digits[3,3], digits[6,4] ]
 	  end
 	end
+	def include_javascript (file)
+	    scriptline = " <script type=\"text/javascript\">" + render(:file => file) + "</script>"
+	    content_for(:head, raw(scriptline))
+	end
 end

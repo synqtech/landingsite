@@ -55,14 +55,14 @@ Calculate Return of Investment
             <th>Competitor Actual</th>
             <td><%= "$#{ comp_gates = @roi_survey._num_gates_needed * 3899 }.00" %></td>
             <td><%= "$#{ comp_deactivators = @roi_survey.num_pos_terminals * 185 }.00" %></td>
-            <td><%= "$#{ comp_install = (@roi_survey.num_pos_terminals * 85 ) + (@roi_survey.num_exits * 1995 )}.00" %></td>
+            <td><%= "$#{ comp_install = 290+(@roi_survey.num_pos_terminals * 85 ) + (@roi_survey.num_exits * 1995 )}.00" %></td>
             <td><%=  "$#{ comp_gates + comp_deactivators + comp_install}.00" %></td>
           </tr>
           <tr>
             <th>SYNQ Actual</th>
             <td><%= "$#{ sq_gates = @roi_survey._num_gates_needed * 3899}.00" %></td>
             <td><%= "$#{ sq_deactivators = @roi_survey.num_pos_terminals * 185}.00" %></td>
-            <td><%= "$#{ sq_install = (@roi_survey.num_pos_terminals * 85) + (@roi_survey._num_gates_needed * 1995)}.00" %></td>
+            <td><%= "$#{ sq_install = 290+(@roi_survey.num_pos_terminals * 85) + (@roi_survey._num_gates_needed * 1995)}.00" %></td>
             <td><%=  "$#{ sq_actual = (sq_gates + sq_deactivators + sq_install)}.00" %></td>
           </tr>
         </table>

@@ -1,0 +1,92 @@
+// Place all the styles related to the quotes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary: #2287d3;
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,900,700|Roboto+Condensed:400,700,300);
+.quote {
+	font-family: 'Roboto Condensed', 'Helvetica', 'Verdana', sans-serif;
+}
+.white {
+	background: #fff;
+}
+.topbar {
+	background: $primary;
+	min-height: 5px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.grey-highlight {
+	background:#efefef;
+	border: 1px solid #efefef;
+	border-radius: 3px;
+	width: auto;
+	padding: 15px;
+	float: right;
+	-webkit-print-color-adjust: exact;
+	-moz-print-color-adjust: exact;
+
+}
+.searchbar {
+	background: #fff;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	top: 5px;
+	left: 0px;
+	position: fixed;
+	.search-wrap {
+		
+			width: 300px;
+			margin: 5px auto;
+			display: block;
+
+		
+	}
+}
+
+table.fullwidth {
+	width: 100%;
+	tr {
+		td {
+			img {
+				width: 100%;
+				margin: 10px;
+				height: auto;
+			}
+		}
+	}
+
+}
+
+.searchdropdown-wrap {
+	background: rgba(0,0,0,.50);
+	position: fixed
+	;
+	top: 55px;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+}
+.searchdropdown {
+
+	width: 300px;
+	margin-left: -150px;
+	left: 50%;
+	position: absolute;
+
+
+	tr:hover {
+		background: #f0f0ff;
+		cursor: pointer;
+	}
+
+	.panel {
+		min-height: 500px;
+		width: 100%;
+		
+	}
+}

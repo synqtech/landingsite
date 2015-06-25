@@ -33,12 +33,17 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass'
-
+gem "bower-rails", "~> 0.9.2"
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
+gem 'wkhtmltopdf'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+gem 'paperclip'
+gem 'aws-sdk'
+gem "cocoon"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

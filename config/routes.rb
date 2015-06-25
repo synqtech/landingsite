@@ -1,4 +1,11 @@
 WCSTest::Application.routes.draw do
+  resources :quotes
+
+  resources :quote_lines
+  get "products/search"
+  resources :products
+
+
   resources :roi_surveys , :except => 'index'
   get '/distributors', :to=>'distributors#new'
   resources :distributors
@@ -13,6 +20,8 @@ WCSTest::Application.routes.draw do
   get "home/about"
   get "home/distributor_signup"
   get "home/contact"
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

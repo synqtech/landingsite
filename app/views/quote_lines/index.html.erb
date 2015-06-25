@@ -1,0 +1,29 @@
+<h1>Listing quote_lines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Qty</th>
+      <th>Discount</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quote_lines.each do |quote_line| %>
+      <tr>
+        <td><%= quote_line.qty %></td>
+        <td><%= quote_line.discount %></td>
+        <td><%= link_to 'Show', quote_line %></td>
+        <td><%= link_to 'Edit', edit_quote_line_path(quote_line) %></td>
+        <td><%= link_to 'Destroy', quote_line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quote line', new_quote_line_path %>
